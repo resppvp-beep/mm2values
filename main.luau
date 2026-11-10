@@ -1,10 +1,3 @@
--- Supreme Values snapshot: site update November 9, 2026
--- Source: https://supremevalues.com/mm2
--- DATA: {category, image name, displayed name, value, official URL, stability, latest published change}
--- All catalog data are from Supreme Values snapshot November 9, 2026; may be outdated.
--- A missing change is unknown, not zero. Tier conversions are estimates.
--- This is a prototype: MM2 GUI structure and item labels were not verified.
--- Identical names are deliberately not guessed. Values do not update automatically.
 local items = {
 
     {"ancients", "Batwing", "Batwing", "42", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-1"},
