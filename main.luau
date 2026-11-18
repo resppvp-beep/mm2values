@@ -1,37 +1,37 @@
 local items = {
 
-    {"ancients", "Batwing", "Batwing", "42", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-1"},
+    {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
     {"ancients", "Celestial", "Celestial", "1,950", "https://supremevalues.com/mm2/ancients?item=Celestial", "Stable", "-50"},
-    {"ancients", "Elderwood Scythe", "Elderwood Scythe", "38", "https://supremevalues.com/mm2/ancients?item=Elderwood_Scythe", "Stable", "-2"},
-    {"ancients", "Emberbow", "Emberbow", "650", "https://supremevalues.com/mm2/ancients?item=Emberbow", "Fluctuating", "+25"},
-    {"ancients", "Emberscythe", "Emberscythe", "625", "https://supremevalues.com/mm2/ancients?item=Emberscythe", "Fluctuating", "+25"},
+    {"ancients", "Elderwood Scythe", "Elderwood Scythe", "35", "https://supremevalues.com/mm2/ancients?item=Elderwood_Scythe", "Stable", "-3"},
+    {"ancients", "Emberbow", "Emberbow", "675", "https://supremevalues.com/mm2/ancients?item=Emberbow", "Fluctuating", "+25"},
+    {"ancients", "Emberscythe", "Emberscythe", "675", "https://supremevalues.com/mm2/ancients?item=Emberscythe", "Fluctuating", "+50"},
     {"ancients", "Gingerscope", "Gingerscope", "16,000", "https://supremevalues.com/mm2/ancients?item=Gingerscope", "Stable", "+250"},
     {"ancients", "Hallowscythe", "Hallowscythe", "30", "https://supremevalues.com/mm2/ancients?item=Hallowscythe", "Stable", "-2"},
-    {"ancients", "Harvester", "Harvester", "260", "https://supremevalues.com/mm2/ancients?item=Harvester", "Stable", "+10"},
+    {"ancients", "Harvester", "Harvester", "280", "https://supremevalues.com/mm2/ancients?item=Harvester", "Stable", "+5"},
     {"ancients", "Icebreaker", "Icebreaker", "65", "https://supremevalues.com/mm2/ancients?item=Icebreaker", "Stable", "-2"},
-    {"ancients", "Icepiercer", "Icepiercer", "170", "https://supremevalues.com/mm2/ancients?item=Icepiercer", "Stable", "+10"},
+    {"ancients", "Icepiercer", "Icepiercer", "190", "https://supremevalues.com/mm2/ancients?item=Icepiercer", "Stable", "+5"},
     {"ancients", "Icewing", "Icewing", "13", "https://supremevalues.com/mm2/ancients?item=Icewing", "Stable", "-2"},
-    {"ancients", "Logchopper", "Logchopper", "18", "https://supremevalues.com/mm2/ancients?item=Logchopper", "Stable", "-2"},
-    {"ancients", "Nik's Scythe", "Nik's Scythe", "N/A", "https://supremevalues.com/mm2/ancients", nil, nil},
-    {"ancients", "Swirly Axe", "Swirly Axe", "38", "https://supremevalues.com/mm2/ancients?item=Swirly_Axe", "Stable", "-2"},
-    {"ancients", "Travelers Axe", "Traveler's Axe", "7,000", "https://supremevalues.com/mm2/ancients?item=Travelers_Axe", "Underpaid For", "-100"},
-    {"ancients", "Vampires Axe", "Vampire's Axe", "1,400", "https://supremevalues.com/mm2/ancients?item=Vampires_Axe", "Stable", "-25"},
-    {"chromas", "Chroma Alienbeam", "Chroma Alienbeam", "20,000", "https://supremevalues.com/mm2/chromas?item=CAB", "Underpaid For", "-2,000"},
-    {"chromas", "Chroma Bauble", "Chroma Bauble", "29,000", "https://supremevalues.com/mm2/chromas?item=CBaub", "Stable", "-1,000"},
-    {"chromas", "Chroma Beachy", "Chroma Beachy", "1,050", "https://supremevalues.com/mm2/chromas?item=CBeachy", "Underpaid For", "-50"},
+    {"ancients", "Logchopper", "Logchopper", "17", "https://supremevalues.com/mm2/ancients?item=Logchopper", "Stable", "-1"},
+    {"ancients", "Nik's Scythe", "Nik's Scythe", "Priceless", "https://supremevalues.com/mm2/ancients", "Overpaid For", nil},
+    {"ancients", "Swirly Axe", "Swirly Axe", "35", "https://supremevalues.com/mm2/ancients?item=Swirly_Axe", "Stable", "-3"},
+    {"ancients", "Travelers Axe", "Traveler's Axe", "6,600", "https://supremevalues.com/mm2/ancients?item=Travelers_Axe", "Stable", "-100"},
+    {"ancients", "Vampires Axe", "Vampire's Axe", "1,250", "https://supremevalues.com/mm2/ancients?item=Vampires_Axe", "Underpaid For", "-50"},
+    {"chromas", "Chroma Alienbeam", "Chroma Alienbeam", "18,000", "https://supremevalues.com/mm2/chromas?item=CAB", "Stable", "-500"},
+    {"chromas", "Chroma Bauble", "Chroma Bauble", "29,000", "https://supremevalues.com/mm2/chromas?item=CBaub", "Stable", "-1000"},
+    {"chromas", "Chroma Beachy", "Chroma Beachy", "850", "https://supremevalues.com/mm2/chromas?item=CBeachy", "Underpaid For", "-25"},
     {"chromas", "Chroma Blizzard", "Chroma Blizzard", "5,500", "https://supremevalues.com/mm2/chromas?item=CBZ", "Stable", "+250"},
     {"chromas", "Chroma Boneblade", "Chroma Boneblade", "22", "https://supremevalues.com/mm2/chromas?item=CBB", "Stable", "-3"},
     {"chromas", "Chroma Candleflame", "Chroma Candleflame", "40", "https://supremevalues.com/mm2/chromas?item=CCF", "Stable", "-2"},
-    {"chromas", "Chroma Constellation", "C. Constellation", "27,000", "https://supremevalues.com/mm2/chromas?item=CConst", "Stable", "-1,000"},
+    {"chromas", "Chroma Constellation", "C. Constellation", "27,000", "https://supremevalues.com/mm2/chromas?item=CConst", "Stable", "-1000"},
     {"chromas", "Chroma Cookiecane", "Chroma Cookiecane", "32", "https://supremevalues.com/mm2/chromas?item=CCC", "Stable", "-1"},
     {"chromas", "Chroma Darkbringer", "Chroma Darkbringer", "65", "https://supremevalues.com/mm2/chromas?item=CDB", "Stable", "-5"},
-    {"chromas", "Chroma Deathshard", "Chroma Deathshard", "35", "https://supremevalues.com/mm2/chromas?item=CDS", "Stable", "-3"},
+    {"chromas", "Chroma Deathshard", "Chroma Deathshard", "33", "https://supremevalues.com/mm2/chromas?item=CDS", "Stable", "-2"},
     {"chromas", "Chroma Elderwood Blade", "C. Elderwood Blade", "37", "https://supremevalues.com/mm2/chromas?item=CEB", "Stable", "-1"},
-    {"chromas", "Chroma Emberbow", "Chroma Emberbow", "6,000", "https://supremevalues.com/mm2/chromas?item=CEmberbow", "Fluctuating", "+500"},
-    {"chromas", "Chroma Emberscythe", "Chroma Emberscythe", "15,000", "https://supremevalues.com/mm2/chromas?item=CEmberscythe", "Fluctuating", "+1,000"},
-    {"chromas", "Chroma Embersickle", "Chroma Embersickle", "1,950", "https://supremevalues.com/mm2/chromas?item=CEmbersickle", "Fluctuating", "-200"},
-    {"chromas", "Chroma Evergreen", "Chroma Evergreen", "33,000", "https://supremevalues.com/mm2/chromas?item=CEvergreen", "Stable", "-1,000"},
-    {"chromas", "Chroma Evergun", "Chroma Evergun", "47,000", "https://supremevalues.com/mm2/chromas?item=CEvergun", "Stable", "-1,000"},
+    {"chromas", "Chroma Emberbow", "Chroma Emberbow", "6,250", "https://supremevalues.com/mm2/chromas?item=CEmberbow", "Fluctuating", "+250"},
+    {"chromas", "Chroma Emberscythe", "Chroma Emberscythe", "12,000", "https://supremevalues.com/mm2/chromas?item=CEmberscythe", "Fluctuating", "-1000"},
+    {"chromas", "Chroma Embersickle", "Chroma Embersickle", "1,900", "https://supremevalues.com/mm2/chromas?item=CEmbersickle", "Fluctuating", "-50"},
+    {"chromas", "Chroma Evergreen", "Chroma Evergreen", "34,000", "https://supremevalues.com/mm2/chromas?item=CEvergreen", "Stable", "+1000"},
+    {"chromas", "Chroma Evergun", "Chroma Evergun", "48,000", "https://supremevalues.com/mm2/chromas?item=CEvergun", "Stable", "+1000"},
     {"chromas", "Chroma Fang", "Chroma Fang", "32", "https://supremevalues.com/mm2/chromas?item=CFang", "Stable", "-3"},
     {"chromas", "Chroma Fire Bat", "Chroma Fire Bat", "3", "https://supremevalues.com/mm2/chromas?item=CBat", "Underpaid For", "-1"},
     {"chromas", "Chroma Fire Bear", "Chroma Fire Bear", "3", "https://supremevalues.com/mm2/chromas?item=CBear", "Underpaid For", "-1"},
@@ -41,10 +41,10 @@ local items = {
     {"chromas", "Chroma Fire Fox", "Chroma Fire Fox", "3", "https://supremevalues.com/mm2/chromas?item=CFox", "Underpaid For", "-1"},
     {"chromas", "Chroma Fire Pig", "Chroma Fire Pig", "3", "https://supremevalues.com/mm2/chromas?item=CPig", "Underpaid For", "-1"},
     {"chromas", "Chroma Gemstone", "Chroma Gemstone", "32", "https://supremevalues.com/mm2/chromas?item=CGem", "Stable", "-3"},
-    {"chromas", "Chroma Gingerblade", "Chroma Gingerblade", "27", "https://supremevalues.com/mm2/chromas?item=CGB", "Stable", "-1"},
+    {"chromas", "Chroma Gingerblade", "Chroma Gingerblade", "25", "https://supremevalues.com/mm2/chromas?item=CGB", "Stable", "-2"},
     {"chromas", "Chroma Heart Wand", "Chroma Heart Wand", "3,500", "https://supremevalues.com/mm2/chromas?item=CHW", "Stable", "-100"},
     {"chromas", "Chroma Heat", "Chroma Heat", "28", "https://supremevalues.com/mm2/chromas?item=CHeat", "Stable", "-2"},
-    {"chromas", "Chroma Icecream", "Chroma Icecream", "1,800", "https://supremevalues.com/mm2/chromas?item=CIcecream", "Underpaid For", "-25"},
+    {"chromas", "Chroma Icecream", "Chroma Icecream", "1,600", "https://supremevalues.com/mm2/chromas?item=CIcecream", "Underpaid For", "-50"},
     {"chromas", "Chroma Immortal", "Chroma Immortal", "1,600", "https://supremevalues.com/mm2/chromas?item=CImmortal", "Doing Well", "+0"},
     {"chromas", "Chroma Laser", "Chroma Laser", "40", "https://supremevalues.com/mm2/chromas?item=CLaser", "Stable", "-2"},
     {"chromas", "Chroma Lightbringer", "Chroma Lightbringer", "60", "https://supremevalues.com/mm2/chromas?item=CLB", "Stable", "-5"},
@@ -52,11 +52,11 @@ local items = {
     {"chromas", "Chroma Mortal", "Chroma Mortal", "1,600", "https://supremevalues.com/mm2/chromas?item=CMortal", "Doing Well", "+0"},
     {"chromas", "Chroma Ornament", "Chroma Ornament", "1,825", "https://supremevalues.com/mm2/chromas?item=COR", "Stable", "+25"},
     {"chromas", "Chroma Raygun", "Chroma Raygun", "12,500", "https://supremevalues.com/mm2/chromas?item=CRG", "Stable", "-250"},
-    {"chromas", "Chroma Sands", "Chroma Sands", "1,100", "https://supremevalues.com/mm2/chromas?item=CSands", "Underpaid For", "-50"},
+    {"chromas", "Chroma Sands", "Chroma Sands", "900", "https://supremevalues.com/mm2/chromas?item=CSands", "Underpaid For", "-25"},
     {"chromas", "Chroma Saw", "Chroma Saw", "23", "https://supremevalues.com/mm2/chromas?item=CSaw", "Stable", "-2"},
-    {"chromas", "Chroma Seer", "Chroma Seer", "28", "https://supremevalues.com/mm2/chromas?item=CSeer", "Stable", "-2"},
+    {"chromas", "Chroma Seer", "Chroma Seer", "27", "https://supremevalues.com/mm2/chromas?item=CSeer", "Stable", "-1"},
     {"chromas", "Chroma Shark", "Chroma Shark", "32", "https://supremevalues.com/mm2/chromas?item=CShark", "Stable", "-3"},
-    {"chromas", "Chroma Slasher", "Chroma Slasher", "32", "https://supremevalues.com/mm2/chromas?item=CSlasher", "Stable", "-1"},
+    {"chromas", "Chroma Slasher", "Chroma Slasher", "30", "https://supremevalues.com/mm2/chromas?item=CSlasher", "Stable", "-2"},
     {"chromas", "Chroma Snow Dagger", "Chroma Snow Dagger", "2,350", "https://supremevalues.com/mm2/chromas?item=CDagger", "Stable", "-100"},
     {"chromas", "Chroma Snowcannon", "Chroma Snowcannon", "7,750", "https://supremevalues.com/mm2/chromas?item=CCannon", "Stable", "-250"},
     {"chromas", "Chroma Snowstorm", "Chroma Snowstorm", "4,250", "https://supremevalues.com/mm2/chromas?item=CSnowstorm", "Stable", "+50"},
@@ -65,7 +65,7 @@ local items = {
     {"chromas", "Chroma Sweet", "Chroma Sweet", "1,725", "https://supremevalues.com/mm2/chromas?item=CSweet", "Stable", "-25"},
     {"chromas", "Chroma Swirly Gun", "Chroma Swirly Gun", "35", "https://supremevalues.com/mm2/chromas?item=CSG", "Stable", "-3"},
     {"chromas", "Chroma Tides", "Chroma Tides", "27", "https://supremevalues.com/mm2/chromas?item=CTides", "Stable", "-1"},
-    {"chromas", "Chroma Travelers Gun", "C. Traveler's Gun", "140,000", "https://supremevalues.com/mm2/chromas?item=CTG", "Stable", "-5,000"},
+    {"chromas", "Chroma Travelers Gun", "C. Traveler's Gun", "140,000", "https://supremevalues.com/mm2/chromas?item=CTG", "Stable", "-5000"},
     {"chromas", "Chroma Treat", "Chroma Treat", "1,775", "https://supremevalues.com/mm2/chromas?item=CTreat", "Stable", "-75"},
     {"chromas", "Chroma Vampires Gun", "C. Vampire's Gun", "24,500", "https://supremevalues.com/mm2/chromas?item=CVG", "Stable", "-500"},
     {"chromas", "Chroma Watergun", "Chroma Watergun", "2,300", "https://supremevalues.com/mm2/chromas?item=CWG", "Stable", "-50"},
@@ -361,11 +361,11 @@ local items = {
     {"godlies", "Alienbeam", "Alienbeam", "1,875", "https://supremevalues.com/mm2/godlies?item=Alienbeam", "Stable", "-25"},
     {"godlies", "Amerilaser", "Amerilaser", "22", "https://supremevalues.com/mm2/godlies?item=Amerilaser", "Stable", "-1"},
     {"godlies", "Australis", "Australis", "125", "https://supremevalues.com/mm2/godlies?item=Australis", "Stable", "-5"},
-    {"godlies", "Bat", "Bat", "130", "https://supremevalues.com/mm2/godlies?item=Bat", "Stable", "+5"},
+    {"godlies", "Bat", "Bat", "145", "https://supremevalues.com/mm2/godlies?item=Bat", "Stable", "+5"},
     {"godlies", "BattleAxe", "Battleaxe", "12", "https://supremevalues.com/mm2/godlies?item=Battleaxe", "Stable", "+0"},
     {"godlies", "BattleAxe II", "Battleaxe II", "17", "https://supremevalues.com/mm2/godlies?item=BA2", "Stable", "-1"},
     {"godlies", "Bauble", "Bauble", "675", "https://supremevalues.com/mm2/godlies?item=Bauble", "Stable", "-25"},
-    {"godlies", "Beachy", "Beachy", "75", "https://supremevalues.com/mm2/godlies?item=Beachy", "Stable", "-5"},
+    {"godlies", "Beachy", "Beachy", "65", "https://supremevalues.com/mm2/godlies?item=Beachy", "Stable", "-5"},
     {"godlies", "Bioblade", "Bioblade", "8", "https://supremevalues.com/mm2/godlies?item=Bioblade", "Stable", "-2"},
     {"godlies", "Blaster", "Blaster", "17", "https://supremevalues.com/mm2/godlies?item=Blaster", "Stable", "-1"},
     {"godlies", "Blizzard", "Blizzard", "250", "https://supremevalues.com/mm2/godlies?item=Blizzard", "Stable", "-5"},
@@ -374,20 +374,20 @@ local items = {
     {"godlies", "Blue Seer", "Blue Seer", "3", "https://supremevalues.com/mm2/godlies?item=Blue_Seer", "Stable", "+0"},
     {"godlies", "Boneblade", "Boneblade", "7", "https://supremevalues.com/mm2/godlies?item=Boneblade", "Stable", "+0"},
     {"godlies", "Borealis", "Borealis", "130", "https://supremevalues.com/mm2/godlies?item=Borealis", "Stable", "-5"},
-    {"godlies", "Candleflame", "Candleflame", "33", "https://supremevalues.com/mm2/godlies?item=Candleflame", "Stable", "-2"},
-    {"godlies", "Candy", "Candy", "80", "https://supremevalues.com/mm2/godlies?item=Candy", "Stable", "-5"},
+    {"godlies", "Candleflame", "Candleflame", "30", "https://supremevalues.com/mm2/godlies?item=Candleflame", "Stable", "-3"},
+    {"godlies", "Candy", "Candy", "85", "https://supremevalues.com/mm2/godlies?item=Candy", "Stable", "+5"},
     {"godlies", "Chill", "Chill", "10", "https://supremevalues.com/mm2/godlies?item=Chill", "Stable", "-2"},
     {"godlies", "Clockwork", "Clockwork", "10", "https://supremevalues.com/mm2/godlies?item=Clockwork", "Stable", "-2"},
     {"godlies", "Constellation", "Constellation", "2,500", "https://supremevalues.com/mm2/godlies?item=Constellation", "Stable", "-50"},
     {"godlies", "Cookieblade", "Cookieblade", "3", "https://supremevalues.com/mm2/godlies?item=Cookieblade", "Stable", "+0"},
-    {"godlies", "Cookiecane", "Cookiecane", "13", "https://supremevalues.com/mm2/godlies?item=Cookiecane", "Stable", "-2"},
-    {"godlies", "Darkbringer", "Darkbringer", "33", "https://supremevalues.com/mm2/godlies?item=Darkbringer", "Stable", "-2"},
+    {"godlies", "Cookiecane", "Cookiecane", "12", "https://supremevalues.com/mm2/godlies?item=Cookiecane", "Stable", "-1"},
+    {"godlies", "Darkbringer", "Darkbringer", "32", "https://supremevalues.com/mm2/godlies?item=Darkbringer", "Stable", "-1"},
     {"godlies", "Darkshot", "Darkshot", "1,450", "https://supremevalues.com/mm2/godlies?item=Darkshot", "Stable", "-25"},
     {"godlies", "Darksword", "Darksword", "1,425", "https://supremevalues.com/mm2/godlies?item=Darksword", "Stable", "-25"},
     {"godlies", "Deathshard", "Deathshard", "13", "https://supremevalues.com/mm2/godlies?item=Deathshard", "Stable", "-2"},
     {"godlies", "Eggblade", "Eggblade", "5", "https://supremevalues.com/mm2/godlies?item=Eggblade", "Stable", "+0"},
-    {"godlies", "Elderwood Blade", "Elderwood Blade", "33", "https://supremevalues.com/mm2/godlies?item=Elderwood_Blade", "Stable", "-2"},
-    {"godlies", "Elderwood Revolver", "Elderwood Revolver", "33", "https://supremevalues.com/mm2/godlies?item=Elderwood_Revolver", "Stable", "-2"},
+    {"godlies", "Elderwood Blade", "Elderwood Blade", "30", "https://supremevalues.com/mm2/godlies?item=Elderwood_Blade", "Stable", "-3"},
+    {"godlies", "Elderwood Revolver", "Elderwood Revolver", "32", "https://supremevalues.com/mm2/godlies?item=Elderwood_Revolver", "Stable", "-1"},
     {"godlies", "Embersickle", "Embersickle", "135", "https://supremevalues.com/mm2/godlies?item=Embersickle", "Fluctuating", "+5"},
     {"godlies", "Eternal", "Eternal", "7", "https://supremevalues.com/mm2/godlies?item=Eternal", "Stable", "-1"},
     {"godlies", "Eternal II", "Eternal II", "7", "https://supremevalues.com/mm2/godlies?item=Eternal2", "Stable", "-1"},
@@ -419,28 +419,28 @@ local items = {
     {"godlies", "Ice Dragon", "Ice Dragon", "7", "https://supremevalues.com/mm2/godlies?item=Ice_Dragon", "Stable", "-1"},
     {"godlies", "Ice Shard", "Ice Shard", "7", "https://supremevalues.com/mm2/godlies?item=Ice_Shard", "Stable", "-1"},
     {"godlies", "Icebeam", "Icebeam", "18", "https://supremevalues.com/mm2/godlies?item=Icebeam", "Stable", "-2"},
-    {"godlies", "Iceblaster", "Iceblaster", "33", "https://supremevalues.com/mm2/godlies?item=Iceblaster", "Stable", "-2"},
+    {"godlies", "Iceblaster", "Iceblaster", "32", "https://supremevalues.com/mm2/godlies?item=Iceblaster", "Stable", "-1"},
     {"godlies", "Icecream", "Icecream", "130", "https://supremevalues.com/mm2/godlies?item=Icecream", "Stable", "-5"},
     {"godlies", "Iceflake", "Iceflake", "15", "https://supremevalues.com/mm2/godlies?item=Iceflake", "Stable", "-2"},
-    {"godlies", "Immortal", "Immortal", "130", "https://supremevalues.com/mm2/godlies?item=Immortal", "Fluctuating", "-5"},
+    {"godlies", "Immortal", "Immortal", "120", "https://supremevalues.com/mm2/godlies?item=Immortal", "Fluctuating", "-5"},
     {"godlies", "Jinglegun", "Jinglegun", "13", "https://supremevalues.com/mm2/godlies?item=Jinglegun", "Stable", "-2"},
     {"godlies", "Laser", "Laser", "22", "https://supremevalues.com/mm2/godlies?item=Laser", "Stable", "-1"},
     {"godlies", "Lightbringer", "Lightbringer", "32", "https://supremevalues.com/mm2/godlies?item=Lightbringer", "Stable", "-1"},
-    {"godlies", "Luger", "Luger", "18", "https://supremevalues.com/mm2/godlies?item=Luger", "Stable", "-2"},
+    {"godlies", "Luger", "Luger", "20", "https://supremevalues.com/mm2/godlies?item=Luger", "Stable", "+2"},
     {"godlies", "Lugercane", "Lugercane", "13", "https://supremevalues.com/mm2/godlies?item=Lugercane", "Stable", "-2"},
-    {"godlies", "Makeshift", "Makeshift", "33", "https://supremevalues.com/mm2/godlies?item=Makeshift", "Stable", "-2"},
+    {"godlies", "Makeshift", "Makeshift", "30", "https://supremevalues.com/mm2/godlies?item=Makeshift", "Stable", "-3"},
     {"godlies", "Minty", "Minty", "13", "https://supremevalues.com/mm2/godlies?item=Minty", "Stable", "-2"},
-    {"godlies", "Mortal", "Mortal", "130", "https://supremevalues.com/mm2/godlies?item=Mortal", "Fluctuating", "-5"},
+    {"godlies", "Mortal", "Mortal", "120", "https://supremevalues.com/mm2/godlies?item=Mortal", "Fluctuating", "-5"},
     {"godlies", "Nebula", "Nebula", "13", "https://supremevalues.com/mm2/godlies?item=Nebula", "Stable", "-2"},
     {"godlies", "Nightblade", "Nightblade", "20", "https://supremevalues.com/mm2/godlies?item=Nightblade", "Stable", "-2"},
-    {"godlies", "Ocean", "Ocean", "245", "https://supremevalues.com/mm2/godlies?item=Ocean", "Stable", "-5"},
+    {"godlies", "Ocean", "Ocean", "240", "https://supremevalues.com/mm2/godlies?item=Ocean", "Stable", "-5"},
     {"godlies", "Old Glory", "Old Glory", "15", "https://supremevalues.com/mm2/godlies?item=Old_Glory", "Stable", "-2"},
     {"godlies", "Orange Seer", "Orange Seer", "2", "https://supremevalues.com/mm2/godlies?item=Orange_Seer", "Stable", "+0"},
     {"godlies", "Ornament Godly", "Ornament", "65", "https://supremevalues.com/mm2/godlies?item=Ornament", "Stable", "-5"},
     {"godlies", "Pearl", "Pearl", "75", "https://supremevalues.com/mm2/godlies?item=Pearl", "Stable", "-5"},
     {"godlies", "Pearlshine", "Pearlshine", "80", "https://supremevalues.com/mm2/godlies?item=Pearlshine", "Stable", "-5"},
     {"godlies", "Peppermint", "Peppermint", "4", "https://supremevalues.com/mm2/godlies?item=Peppermint", "Stable", "+0"},
-    {"godlies", "Phantom", "Phantom", "35", "https://supremevalues.com/mm2/godlies?item=Phantom", "Stable", "-2"},
+    {"godlies", "Phantom", "Phantom", "32", "https://supremevalues.com/mm2/godlies?item=Phantom", "Stable", "-3"},
     {"godlies", "Pixel", "Pixel", "17", "https://supremevalues.com/mm2/godlies?item=Pixel", "Stable", "-3"},
     {"godlies", "Plasmabeam", "Plasmabeam", "18", "https://supremevalues.com/mm2/godlies?item=Plasmabeam", "Stable", "-4"},
     {"godlies", "Plasmablade", "Plasmablade", "15", "https://supremevalues.com/mm2/godlies?item=Plasmablade", "Stable", "-2"},
@@ -453,34 +453,34 @@ local items = {
     {"godlies", "Red Luger", "Red Luger", "35", "https://supremevalues.com/mm2/godlies?item=Red_Luger", "Stable", "-2"},
     {"godlies", "Red Seer", "Red Seer", "3", "https://supremevalues.com/mm2/godlies?item=Red_Seer", "Stable", "+0"},
     {"godlies", "Sakura", "Sakura", "1,150", "https://supremevalues.com/mm2/godlies?item=Sakura", "Stable", "-10"},
-    {"godlies", "Sands", "Sands", "75", "https://supremevalues.com/mm2/godlies?item=Sands", "Stable", "-5"},
+    {"godlies", "Sands", "Sands", "65", "https://supremevalues.com/mm2/godlies?item=Sands", "Stable", "-5"},
     {"godlies", "Saw", "Saw", "7", "https://supremevalues.com/mm2/godlies?item=Saw", "Stable", "+0"},
     {"godlies", "Seer", "Seer", "3", "https://supremevalues.com/mm2/godlies?item=Seer", "Stable", "+0"},
     {"godlies", "Shark", "Shark", "20", "https://supremevalues.com/mm2/godlies?item=Shark", "Stable", "-3"},
     {"godlies", "Slasher", "Slasher", "15", "https://supremevalues.com/mm2/godlies?item=Slasher", "Stable", "-2"},
-    {"godlies", "Snow Dagger", "Snow Dagger", "170", "https://supremevalues.com/mm2/godlies?item=Snow_Dagger", "Stable", "-5"},
-    {"godlies", "Snowcannon", "Snowcannon", "700", "https://supremevalues.com/mm2/godlies?item=Snowcannon", "Stable", "+25"},
+    {"godlies", "Snow Dagger", "Snow Dagger", "165", "https://supremevalues.com/mm2/godlies?item=Snow_Dagger", "Stable", "-5"},
+    {"godlies", "Snowcannon", "Snowcannon", "875", "https://supremevalues.com/mm2/godlies?item=Snowcannon", "Doing Well", "+25"},
     {"godlies", "Snowflake", "Snowflake", "5", "https://supremevalues.com/mm2/godlies?item=Snowflake", "Stable", "+0"},
     {"godlies", "Snowstorm", "Snowstorm", "250", "https://supremevalues.com/mm2/godlies?item=Snowstorm", "Stable", "-5"},
-    {"godlies", "Soul", "Soul", "560", "https://supremevalues.com/mm2/godlies?item=Soul", "Underpaid For", "-20"},
-    {"godlies", "Spectre", "Spectre", "35", "https://supremevalues.com/mm2/godlies?item=Spectre", "Stable", "-2"},
+    {"godlies", "Soul", "Soul", "510", "https://supremevalues.com/mm2/godlies?item=Soul", "Underpaid For", "-10"},
+    {"godlies", "Spectre", "Spectre", "32", "https://supremevalues.com/mm2/godlies?item=Spectre", "Stable", "-3"},
     {"godlies", "Spider", "Spider", "10", "https://supremevalues.com/mm2/godlies?item=Spider", "Stable", "-2"},
-    {"godlies", "Spirit", "Spirit", "550", "https://supremevalues.com/mm2/godlies?item=Spirit", "Underpaid For", "-20"},
-    {"godlies", "Sugar", "Sugar", "32", "https://supremevalues.com/mm2/godlies?item=Sugar", "Stable", "-1"},
+    {"godlies", "Spirit", "Spirit", "500", "https://supremevalues.com/mm2/godlies?item=Spirit", "Underpaid For", "-10"},
+    {"godlies", "Sugar", "Sugar", "30", "https://supremevalues.com/mm2/godlies?item=Sugar", "Stable", "-2"},
     {"godlies", "Sunrise", "Sunrise", "800", "https://supremevalues.com/mm2/godlies?item=Sunrise", "Stable", "-25"},
     {"godlies", "Sunset (Knife)", "Sunset", "650", "https://supremevalues.com/mm2/godlies?item=Sunset", "Stable", "-25"},
     {"godlies", "Sweet", "Sweet", "150", "https://supremevalues.com/mm2/godlies?item=Sweet", "Stable", "-5"},
     {"godlies", "Swirly Blade", "Swirly Blade", "12", "https://supremevalues.com/mm2/godlies?item=Swirly_Blade", "Stable", "-1"},
     {"godlies", "Swirly Gun", "Swirly Gun", "18", "https://supremevalues.com/mm2/godlies?item=Swirly_Gun", "Stable", "-2"},
     {"godlies", "Tides", "Tides", "10", "https://supremevalues.com/mm2/godlies?item=Tides", "Stable", "-2"},
-    {"godlies", "Travelers Gun", "Traveler's Gun", "5,000", "https://supremevalues.com/mm2/godlies?item=Travelers_Gun", "Underpaid For", "-100"},
+    {"godlies", "Travelers Gun", "Traveler's Gun", "4,600", "https://supremevalues.com/mm2/godlies?item=Travelers_Gun", "Underpaid For", "-100"},
     {"godlies", "Treat", "Treat", "155", "https://supremevalues.com/mm2/godlies?item=Treat", "Stable", "-5"},
-    {"godlies", "Turkey", "Turkey", "1,850", "https://supremevalues.com/mm2/godlies?item=Turkey", "Stable", "-50"},
+    {"godlies", "Turkey", "Turkey", "1,950", "https://supremevalues.com/mm2/godlies?item=Turkey", "Stable", "+25"},
     {"godlies", "Vampires Edge", "Vampire's Edge", "15", "https://supremevalues.com/mm2/godlies?item=Vampires_Edge", "Stable", "+0"},
     {"godlies", "Vampires Gun", "Vampire's Gun", "1,900", "https://supremevalues.com/mm2/godlies?item=Vampires_Gun", "Stable", "+25"},
     {"godlies", "Virtual", "Virtual", "13", "https://supremevalues.com/mm2/godlies?item=Virtual", "Stable", "-2"},
-    {"godlies", "Watergun", "Watergun", "135", "https://supremevalues.com/mm2/godlies?item=Watergun", "Stable", "-5"},
-    {"godlies", "Waves", "Waves", "240", "https://supremevalues.com/mm2/godlies?item=Waves", "Stable", "-5"},
+    {"godlies", "Watergun", "Watergun", "130", "https://supremevalues.com/mm2/godlies?item=Watergun", "Stable", "-5"},
+    {"godlies", "Waves", "Waves", "235", "https://supremevalues.com/mm2/godlies?item=Waves", "Stable", "-5"},
     {"godlies", "Winters Edge", "Winter's Edge", "5", "https://supremevalues.com/mm2/godlies?item=Winters_Edge", "Stable", "-2"},
     {"godlies", "Xenoknife", "Xenoknife", "400", "https://supremevalues.com/mm2/godlies?item=Xenoknife", "Stable", "-10"},
     {"godlies", "Xenoshot", "Xenoshot", "400", "https://supremevalues.com/mm2/godlies?item=Xenoshot", "Stable", "-10"},
@@ -591,7 +591,7 @@ local items = {
     {"rares", "Darkgun", "Darkgun", "1", "https://supremevalues.com/mm2/rares?item=Darkgun", "Stable", "+1"},
     {"rares", "Darkknife", "Darkknife", "65", "https://supremevalues.com/mm2/rares?item=Darkknife", "Stable", "-5"},
     {"rares", "Deep Sea", "Deep Sea", "x3 T1 Uncommons", "https://supremevalues.com/mm2/rares?item=Deep_Sea", "Stable", nil},
-    {"rares", "Dungeon", "Dungeon", "115", "https://supremevalues.com/mm2/rares?item=Dungeon", "Stable", "-5"},
+    {"rares", "Dungeon", "Dungeon", "110", "https://supremevalues.com/mm2/rares?item=Dungeon", "Stable", "-5"},
     {"rares", "Floral (Gun)", "Floral (Gun)", "x2 T1 Rares", "https://supremevalues.com/mm2/rares?item=Floral_Gun", "Stable", nil},
     {"rares", "Floral (Knife)", "Floral (Knife)", "10", "https://supremevalues.com/mm2/rares?item=Floral", "Stable", "-2"},
     {"rares", "Frostflame (Gun)", "Frostflame (Gun)", "x3 T1 Rares", "https://supremevalues.com/mm2/rares?item=Frostflame_Gun", "Stable", nil},
@@ -971,10 +971,10 @@ local items = {
     {"pets", "Cat", "Cat", "x1 T1 Common", "https://supremevalues.com/mm2/pets?item=Cat", "Stable", nil},
     {"pets", "Dog", "Dog", "x1 T1 Common", "https://supremevalues.com/mm2/pets?item=Dog", "Stable", nil},
     {"pets", "Pumpkin (2021)", "Pumpkin (2021)", "x1 T1 Common", "https://supremevalues.com/mm2/pets?item=Pumpkin_2021", "Stable", nil},
-    {"pets", "Santa Pet", "Santa (2019)", "N/A", "https://supremevalues.com/mm2/pets", nil, nil},
-    {"pets", "Bunny", "Bunny", "N/A", "https://supremevalues.com/mm2/pets", nil, nil},
-    {"pets", "Snowman", "Snowman", "N/A", "https://supremevalues.com/mm2/pets", nil, nil},
-    {"pets", "Ghosty", "Ghosty", "N/A", "https://supremevalues.com/mm2/pets", nil, nil},
+    {"pets", "Santa Pet", "Santa (2019)", "N/A", "https://supremevalues.com/mm2/pets", "Untradable", nil},
+    {"pets", "Bunny", "Bunny", "N/A", "https://supremevalues.com/mm2/pets", "Untradable", nil},
+    {"pets", "Snowman", "Snowman", "N/A", "https://supremevalues.com/mm2/pets", "Untradable", nil},
+    {"pets", "Ghosty", "Ghosty", "N/A", "https://supremevalues.com/mm2/pets", "Untradable", nil},
     {"misc", "Mystery Key", "Mystery Key", "1", "https://supremevalues.com/mm2/misc?item=Mystery_Key", "Stable", "+0"},
     {"misc", "Blue Papers", "Blue Papers", "2", "https://supremevalues.com/mm2/misc?item=Blue_Papers", "Stable", "-1"},
     {"misc", "Box of Fertilizer", "Box of Fertilizer", "2", "https://supremevalues.com/mm2/misc?item=Fert", "Stable", "+0"},
@@ -988,121 +988,121 @@ local items = {
     {"misc", "Skeleton Key", "Skeleton Key", "5", "https://supremevalues.com/mm2/misc?item=Skeleton_Key", "Stable", "+0"},
     {"misc", "Candies (2016)", "Candies (2016)", "x2 T1 Commons", "https://supremevalues.com/mm2/misc?item=Candy_2016", "Stable", nil},
     {"misc", "Candies (2017)", "Candies (2017)", "x1 T1 Common", "https://supremevalues.com/mm2/misc?item=Candy_2017", "Stable", nil},
-    {"sets", "Chroma Ever Set", "Chroma Ever Set", "80,000", "https://supremevalues.com/mm2/sets?item=Chroma_Ever_Set", "Stable", "-2,000"},
-    {"sets", "Chroma Alien Set", "Chroma Alien Set", "32,500", "https://supremevalues.com/mm2/sets?item=Chroma_Alien_Set", "Underpaid For", "-2,000"},
-    {"sets", "Chroma Bauble Set", "Chroma Bauble Set", "30,825", "https://supremevalues.com/mm2/sets?item=Chroma_Bauble_Set", "Stable", "-1,000"},
-    {"sets", "Full C. Ember Set", "Full C. Ember Set", "22,950", "https://supremevalues.com/mm2/sets?item=Full_Chroma_Ember_Set", "Fluctuating", "-1,000"},
-    {"sets", "C. Emberscythe Set", "C. Emberscythe Set", "21,000", "https://supremevalues.com/mm2/sets?item=Chroma_Emberscythe_Set", "Fluctuating", "-1,000"},
-    {"sets", "Chroma Sun Set", "Chroma Sun Set", "14,000", "https://supremevalues.com/mm2/sets?item=Chroma_Sun_Set", "Stable", "-250"},
-    {"sets", "Chroma Snow Set", "Chroma Snow Set", "10,100", "https://supremevalues.com/mm2/sets?item=Chroma_Snow_Set", "Stable", "-100"},
-    {"sets", "Chroma Blizzard Set", "Chroma Blizzard Set", "9,750", "https://supremevalues.com/mm2/sets?item=Chroma_Blizzard_Set", "Stable", "+250"},
-    {"sets", "C. Embersickle Set", "C. Embersickle Set", "7,950", "https://supremevalues.com/mm2/sets?item=Chroma_Embersickle_Set", "Fluctuating", "+1,650"},
-    {"sets", "Chroma Sweet Set", "Chroma Sweet Set", "3,500", "https://supremevalues.com/mm2/sets?item=Chroma_Sweet_Set", "Stable", "-100"},
-    {"sets", "Chroma Mortal Set", "Chroma Mortal Set", "3,200", "https://supremevalues.com/mm2/sets?item=Chroma_Mortal_Set", "Doing Well", "-400"},
-    {"sets", "Chroma Beach Set", "Chroma Beach Set", "2,150", "https://supremevalues.com/mm2/sets?item=Chroma_Beach_Set", "Underpaid For", "-100"},
-    {"sets", "Chroma Bringer Set", "Chroma Bringer Set", "125", "https://supremevalues.com/mm2/sets?item=Chroma_Bringer_Set", "Stable", "-10"},
-    {"sets", "Chroma Slasher Set", "Chroma Slasher Set", "72", "https://supremevalues.com/mm2/sets?item=Chroma_Slasher_Set", "Stable", "-1"},
-    {"sets", "Chroma Pet Set", "Chroma Pet Set", "21", "https://supremevalues.com/mm2/sets?item=Chroma_Pet_Set", "Underpaid For", "-7"},
-    {"sets", "Travelers Set", "Traveler's Set", "12,000", "https://supremevalues.com/mm2/sets?item=Travelers_Set", "Underpaid For", "-200"},
-    {"sets", "Ever Set", "Ever Set", "6,150", "https://supremevalues.com/mm2/sets?item=Ever_Set", "Stable", "+25"},
-    {"sets", "Celestial Set", "Celestial Set", "4,450", "https://supremevalues.com/mm2/sets?item=Celestial_Set", "Stable", "-100"},
-    {"sets", "Alien Set", "Alien Set", "3,725", "https://supremevalues.com/mm2/sets?item=Alien_Set", "Stable", "-50"},
-    {"sets", "Vampires Set", "Vampire's Set", "3,300", "https://supremevalues.com/mm2/sets?item=Vampires_Set", "Stable", "-25"},
-    {"sets", "Dark Set", "Dark Set", "2,875", "https://supremevalues.com/mm2/sets?item=Dark_Set", "Stable", "-50"},
-    {"sets", "Sakura Set", "Sakura Set", "2,310", "https://supremevalues.com/mm2/sets?item=Sakura_Set", "Stable", "-20"},
-    {"sets", "Sun Set", "Sun Set", "1,450", "https://supremevalues.com/mm2/sets?item=Sun_Set", "Stable", "-25"},
-    {"sets", "Full Ember Set", "Full Ember Set", "1,410", "https://supremevalues.com/mm2/sets?item=Full_Ember_Set", "Fluctuating", "+255"},
-    {"sets", "Soul Set", "Soul Set", "1,110", "https://supremevalues.com/mm2/sets?item=Soul_Set", "Underpaid For", "-40"},
-    {"sets", "Emberscythe Set", "Emberscythe Set", "1,275", "https://supremevalues.com/mm2/sets?item=Emberscythe_Set", "Fluctuating", "+250"},
-    {"sets", "Snow Set", "Snow Set", "870", "https://supremevalues.com/mm2/sets?item=Snow_Set", "Stable", "+20"},
-    {"sets", "Rainbow Set", "Rainbow Set", "805", "https://supremevalues.com/mm2/sets?item=Rainbow_Set", "Stable", "-10"},
-    {"sets", "Xeno Set", "Xeno Set", "800", "https://supremevalues.com/mm2/sets?item=Xeno_Set", "Stable", "-20"},
-    {"sets", "Bloom Set", "Bloom Set", "795", "https://supremevalues.com/mm2/sets?item=Bloom_Set", "Stable", "-10"},
-    {"sets", "Bauble Set", "Bauble Set", "740", "https://supremevalues.com/mm2/sets?item=Bauble_Set", "Stable", "-5"},
-    {"sets", "Embersickle Set", "Embersickle Set", "785", "https://supremevalues.com/mm2/sets?item=Embersickle_Set", "Fluctuating", "+130"},
-    {"sets", "Blizzard Set", "Blizzard Set", "500", "https://supremevalues.com/mm2/sets?item=Blizzard_Set", "Stable", "-10"},
-    {"sets", "Ocean Set", "Ocean Set", "485", "https://supremevalues.com/mm2/sets?item=Ocean_Set", "Stable", "-10"},
-    {"sets", "Flowerwood Set", "Flowerwood Set", "475", "https://supremevalues.com/mm2/sets?item=Flowerwood_Set", "Stable", "-10"},
-    {"sets", "Bow Set", "Bow Set", "430", "https://supremevalues.com/mm2/sets?item=Bow_Set", "Stable", "+20"},
-    {"sets", "Sweet Set", "Sweet Set", "305", "https://supremevalues.com/mm2/sets?item=Sweet_Set", "Stable", "-10"},
-    {"sets", "Borealis Set", "Borealis Set", "255", "https://supremevalues.com/mm2/sets?item=Borealis_Set", "Stable", "-10"},
-    {"sets", "Mortal Set", "Mortal Set", "260", "https://supremevalues.com/mm2/sets?item=Mortal_Set", "Fluctuating", "-10"},
-    {"sets", "Full Ice Set", "Full Ice Set", "268", "https://supremevalues.com/mm2/sets?item=Full_Ice_Set", "Stable", "+10"},
-    {"sets", "Corrupt Set", "Corrupt Set", "248", "https://supremevalues.com/mm2/sets?item=Corrupt_Set", "Stable", "-10"},
-    {"sets", "Bat Set", "Bat Set", "163", "https://supremevalues.com/mm2/sets?item=Bat_Set", "Stable", "+5"},
-    {"sets", "Pearl Set", "Pearl Set", "155", "https://supremevalues.com/mm2/sets?item=Pearl_Set", "Stable", "-10"},
-    {"sets", "Beach Set", "Beach Set", "150", "https://supremevalues.com/mm2/sets?item=Beach_Set", "Stable", "-10"},
-    {"sets", "Candy Set", "Candy Set", "112", "https://supremevalues.com/mm2/sets?item=Candy_Set", "Stable", "-1"},
-    {"sets", "Full Elderwood Set", "Full Elderwood Set", "104", "https://supremevalues.com/mm2/sets?item=Full_Elderwood_Set", "Stable", "-6"},
-    {"sets", "Ice Set", "Ice Set", "98", "https://supremevalues.com/mm2/sets?item=Ice_Set", "Stable", "-2"},
-    {"sets", "Elderwood Set", "Elderwood Set", "71", "https://supremevalues.com/mm2/sets?item=Elderwood_Set", "Stable", "-4"},
-    {"sets", "Spectre Set", "Spectre Set", "70", "https://supremevalues.com/mm2/sets?item=Spectre_Set", "Stable", "-4"},
-    {"sets", "Full Swirly Set", "Full Swirly Set", "68", "https://supremevalues.com/mm2/sets?item=Full_Swirly_Set", "Stable", "-3"},
-    {"sets", "Bringer Set", "Bringer Set", "65", "https://supremevalues.com/mm2/sets?item=Bringer_Set", "Stable", "-1"},
-    {"sets", "Swirly Set", "Swirly Set", "56", "https://supremevalues.com/mm2/sets?item=Swirly_Set", "Stable", "-2"},
-    {"sets", "Hallow Set", "Hallow Set", "50", "https://supremevalues.com/mm2/sets?item=Hallow_Set", "Stable", "-2"},
-    {"sets", "Old Glory Set", "Old Glory Set", "37", "https://supremevalues.com/mm2/sets?item=Old_Glory_Set", "Stable", "-1"},
-    {"sets", "Slasher Set", "Slasher Set", "37", "https://supremevalues.com/mm2/sets?item=Slasher_Set", "Stable", "-1"},
-    {"sets", "Iceflake Set", "Iceflake Set", "33", "https://supremevalues.com/mm2/sets?item=Iceflake_Set", "Stable", "-4"},
-    {"sets", "Plasma Set", "Plasma Set", "33", "https://supremevalues.com/mm2/sets?item=Plasma_Set", "Stable", "-2"},
-    {"sets", "Logchopper Set", "Logchopper Set", "31", "https://supremevalues.com/mm2/sets?item=Logchopper_Set", "Stable", "-2"},
-    {"sets", "Ginger Set (Godly)", "Ginger Set (Godly)", "30", "https://supremevalues.com/mm2/sets?item=Ginger_Set_Godly", "Stable", "-2"},
-    {"sets", "Virtual Set", "Virtual Set", "30", "https://supremevalues.com/mm2/sets?item=Virtual_Set", "Stable", "-3"},
-    {"sets", "Eternalcane Set", "Eternalcane Set", "26", "https://supremevalues.com/mm2/sets?item=Eternalcane_Set", "Stable", "-4"},
-    {"sets", "Cookie Set", "Cookie Set", "25", "https://supremevalues.com/mm2/sets?item=Cookie_Set", "Stable", "-1"},
-    {"sets", "Pumpkin Set", "Pumpkin Set", "403", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set", "Underpaid For", "-1"},
-    {"sets", "Latte Set", "Latte Set", "280", "https://supremevalues.com/mm2/sets?item=Latte_Set", "Stable", "-10"},
-    {"sets", "Bats Set", "Bats Set", "231", "https://supremevalues.com/mm2/sets?item=Bats_Set", "Stable", "-10"},
-    {"sets", "Zombified Set", "Zombified Set", "135", "https://supremevalues.com/mm2/sets?item=Zombified_Set", "Stable", "+5"},
-    {"sets", "Gingerbread Set [XMAS2019]", "Gingerbread Set", "86", "https://supremevalues.com/mm2/sets?item=Gingerbread_Set_XMAS2019", "Stable", "+5"},
-    {"sets", "Dark Set (Rare)", "Dark Set (Rare)", "66", "https://supremevalues.com/mm2/sets?item=Dark_Set_Rare", "Stable", "-5"},
-    {"sets", "Silent Night Set", "Silent Night Set", "62", "https://supremevalues.com/mm2/sets?item=Silent_Night_Set", "Stable", "-1"},
-    {"sets", "Spectral Set", "Spectral Set", "53", "https://supremevalues.com/mm2/sets?item=Spectral_Set", "Stable", "-5"},
-    {"sets", "Traveler Set", "Traveler Set", "53", "https://supremevalues.com/mm2/sets?item=Traveler_Set", "Stable", "-5"},
-    {"sets", "Aurora Set (Legend.)", "Aurora Set (Legend.)", "48", "https://supremevalues.com/mm2/sets?item=Aurora_Set_Legend.", "Stable", "-5"},
-    {"sets", "Vampire Set (Legend.)", "Vampire Set (Legend.)", "48", "https://supremevalues.com/mm2/sets?item=Vampire_Set_Legend.", "Stable", "-5"},
-    {"sets", "Pumpkin Set (2020)", "Pumpkin Set (2020)", "39", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2020", "Stable", "-3"},
-    {"sets", "Pumpkin Set (2021)", "Pumpkin Set (2021)", "32", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2021", "Stable", "-3"},
-    {"sets", "Wrap Set", "Wrap Set", "24", "https://supremevalues.com/mm2/sets?item=Wrap_Set", "Stable", "+4"},
-    {"sets", "Gingerbread Set [XMAS2020]", "Gingerbread Set", "13", "https://supremevalues.com/mm2/sets?item=Gingerbread_Set_XMAS2020", "Stable", "+3"},
-    {"sets", "Aurora Set (Rare)", "Aurora Set (Rare)", "8", "https://supremevalues.com/mm2/sets?item=Aurora_Set_Rare", "Stable", "-1"},
-    {"sets", "Cavern Set", "Cavern Set", "8", "https://supremevalues.com/mm2/sets?item=Cavern_Set", "Stable", "-1"},
-    {"sets", "Toxic Set", "Toxic Set", "7", "https://supremevalues.com/mm2/sets?item=Toxic_Set", "Stable", "-2"},
-    {"sets", "Ghost Set", "Ghost Set", "7", "https://supremevalues.com/mm2/sets?item=Ghost_Set", "Stable", "-1"},
-    {"sets", "Pumpkin Set (2019)", "Pumpkin Set (2019)", "7", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2019", "Underpaid For", "-2"},
-    {"sets", "Icedriller Set", "Icedriller Set", "6", "https://supremevalues.com/mm2/sets?item=Icedriller_Set", "Stable", "-3"},
-    {"sets", "Full Elite Set", "Full Elite Set", "6", "https://supremevalues.com/mm2/sets?item=Full_Elite_Set", "Stable", "-2"},
-    {"sets", "Santas Set (Legend.)", "Santa's Set (Legend.)", "6", "https://supremevalues.com/mm2/sets?item=Santas_Set_Legend.", "Stable", "-4"},
-    {"sets", "Scratch Set", "Scratch Set", "5", "https://supremevalues.com/mm2/sets?item=Scratch_Set", "Stable", "-1"},
-    {"sets", "Zombie Set", "Zombie Set", "6", "https://supremevalues.com/mm2/sets?item=Zombie_Set", "Stable", "-2"},
-    {"sets", "Eye Set", "Eye Set", "6", "https://supremevalues.com/mm2/sets?item=Eye_Set", "Underpaid For", "-2"},
-    {"sets", "Snakebite Set", "Snakebite Set", "4", "https://supremevalues.com/mm2/sets?item=Snakebite_Set", "Stable", "-2"},
-    {"sets", "Vampire Set (Rare)", "Vampire Set (Rare)", "4", "https://supremevalues.com/mm2/sets?item=Vampire_Set_Rare", "Stable", "-2"},
-    {"sets", "Frozen Set", "Frozen Set", "4", "https://supremevalues.com/mm2/sets?item=Frozen_Set", "Stable", "-2"},
-    {"sets", "Marble Set", "Marble Set", "4", "https://supremevalues.com/mm2/sets?item=Marble_Set", "Stable", "-1"},
-    {"sets", "Potion Set", "Potion Set", "4", "https://supremevalues.com/mm2/sets?item=Potion_Set", "Stable", "-2"},
-    {"sets", "Candy Swirl Set", "Candy Swirl Set", "3", "https://supremevalues.com/mm2/sets?item=Candy_Swirl_Set", "Stable", "-1"},
-    {"sets", "Lights Set", "Lights Set", "3", "https://supremevalues.com/mm2/sets?item=Lights_Set", "Stable", "-1"},
-    {"sets", "Mummy Set", "Mummy Set", "3", "https://supremevalues.com/mm2/sets?item=Mummy_Set", "Stable", "-1"},
-    {"sets", "Grave Set", "Grave Set", "2", "https://supremevalues.com/mm2/sets?item=Grave_Set", "Stable", "-1"},
-    {"sets", "Haunted Set", "Haunted Set", "2", "https://supremevalues.com/mm2/sets?item=Haunted_Set", "Stable", "-2"},
-    {"sets", "Slime Set", "Slime Set", "2", "https://supremevalues.com/mm2/sets?item=Slime_Set", "Stable", "-1"},
-    {"sets", "Full Bringer Set", "Full Bringer Set", "190", "https://supremevalues.com/mm2/sets?item=Full_Bringer_Set", "Stable", "-1"},
-    {"sets", "Full Luger Set", "Full Luger Set", "156", "https://supremevalues.com/mm2/sets?item=Full_Luger_Set", "Stable", "-2"},
-    {"sets", "Sparkle Set", "Sparkle Set", "127", "https://supremevalues.com/mm2/sets?item=Sparkle_Set", "Stable", "+2"},
-    {"sets", "Luger Set", "Luger Set", "106", "https://supremevalues.com/mm2/sets?item=Luger_Set", "Stable", "-2"},
-    {"sets", "Retro Set", "Retro Set", "70", "https://supremevalues.com/mm2/sets?item=Retro_Set", "Stable", "+0"},
-    {"sets", "Vintage Set", "Vintage Set", "59", "https://supremevalues.com/mm2/sets?item=Vintage_Set", "Stable", "-2"},
-    {"sets", "Full Colored Seer Set", "Full Colored Seer Set", "44", "https://supremevalues.com/mm2/sets?item=Full_Colored_Seer_Set", "Stable", "-2"},
-    {"sets", "Eternal Set", "Eternal Set", "43", "https://supremevalues.com/mm2/sets?item=Eternal_Set", "Stable", "-8"},
-    {"sets", "Skate Set", "Skate Set", "23", "https://supremevalues.com/mm2/sets?item=Skate_Set", "Stable", "-2"},
-    {"sets", "Pals Set", "Pals Set", "20", "https://supremevalues.com/mm2/sets?item=Pals_Set", "Stable", "+4"},
-    {"sets", "Colored Seer Set", "Colored Seer Set", "16", "https://supremevalues.com/mm2/sets?item=Colored_Seer_Set", "Stable", "-6"},
-    {"sets", "Wrapping Paper Set", "Wrapping Paper Set", "14", "https://supremevalues.com/mm2/sets?item=Wrapping_Paper_Set", "Stable", "-2"},
-    {"sets", "Small Set (107)", "Small Set (107)", "1,270", "https://supremevalues.com/mm2/sets?item=Small_Set_107", "Fluctuating", "+2"},
-    {"sets", "Small Set (103)", "Small Set (103)", "1,235", "https://supremevalues.com/mm2/sets?item=Small_Set_103", "Fluctuating", "-5"},
-    {"sets", "Full Chroma Set", "Full Chroma Set", "555", "https://supremevalues.com/mm2/sets?item=Full_Chroma_Set", "Underpaid For", "-15"},
-    {"sets", "Chroma Weapon Set", "Chroma Weapon Set", "535", "https://supremevalues.com/mm2/sets?item=Chroma_Weapon_Set", "Stable", "-10"},
+    {"sets", "Chroma Ever Set", "Chroma Ever Set", "82,000 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Ever_Set", "Stable", "+1000"},
+    {"sets", "Chroma Alien Set", "Chroma Alien Set", "30,500 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Alien_Set", "Stable", "-500"},
+    {"sets", "Chroma Bauble Set", "Chroma Bauble Set", "30,825 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Bauble_Set", "Stable", "-1000"},
+    {"sets", "Full C. Ember Set", "Full C. Ember Set", "20,150 [19,350 - 20,950]", "https://supremevalues.com/mm2/sets?item=Full_Chroma_Ember_Set", "Fluctuating", "+250"},
+    {"sets", "C. Emberscythe Set", "C. Emberscythe Set", "18,250 [17,500 - 19,000]", "https://supremevalues.com/mm2/sets?item=Chroma_Emberscythe_Set", "Fluctuating", "+250"},
+    {"sets", "Chroma Sun Set", "Chroma Sun Set", "14,000 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Sun_Set", "Stable", "-250"},
+    {"sets", "Chroma Snow Set", "Chroma Snow Set", "10,100 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Snow_Set", "Stable", "-100"},
+    {"sets", "Chroma Blizzard Set", "Chroma Blizzard Set", "9,750 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Blizzard_Set", "Stable", "+250"},
+    {"sets", "C. Embersickle Set", "C. Embersickle Set", "8,150 [7,850 - 8,450]", "https://supremevalues.com/mm2/sets?item=Chroma_Embersickle_Set", "Fluctuating", "+250"},
+    {"sets", "Chroma Sweet Set", "Chroma Sweet Set", "3,500 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Sweet_Set", "Stable", "-100"},
+    {"sets", "Chroma Mortal Set", "Chroma Mortal Set", "3,200 [3,200 - 3,400]", "https://supremevalues.com/mm2/sets?item=Chroma_Mortal_Set", "Doing Well", "-400"},
+    {"sets", "Chroma Beach Set", "Chroma Beach Set", "1,750 [1,700 - 1,750]", "https://supremevalues.com/mm2/sets?item=Chroma_Beach_Set", "Underpaid For", "-50"},
+    {"sets", "Chroma Bringer Set", "Chroma Bringer Set", "125 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Bringer_Set", "Stable", "-10"},
+    {"sets", "Chroma Slasher Set", "Chroma Slasher Set", "70 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Slasher_Set", "Stable", "-2"},
+    {"sets", "Chroma Pet Set", "Chroma Pet Set", "21 [14 - 21]", "https://supremevalues.com/mm2/sets?item=Chroma_Pet_Set", "Underpaid For", "-7"},
+    {"sets", "Travelers Set", "Traveler's Set", "11,200 [11,100 - 11,200]", "https://supremevalues.com/mm2/sets?item=Travelers_Set", "Underpaid For", "-200"},
+    {"sets", "Ever Set", "Ever Set", "6,150 [N/A]", "https://supremevalues.com/mm2/sets?item=Ever_Set", "Stable", "+25"},
+    {"sets", "Celestial Set", "Celestial Set", "4,450 [N/A]", "https://supremevalues.com/mm2/sets?item=Celestial_Set", "Stable", "-100"},
+    {"sets", "Alien Set", "Alien Set", "3,725 [N/A]", "https://supremevalues.com/mm2/sets?item=Alien_Set", "Stable", "-50"},
+    {"sets", "Vampires Set", "Vampire's Set", "3,150 [3,100 - 3,150]", "https://supremevalues.com/mm2/sets?item=Vampires_Set", "Underpaid For", "-50"},
+    {"sets", "Dark Set", "Dark Set", "2,875 [N/A]", "https://supremevalues.com/mm2/sets?item=Dark_Set", "Stable", "-50"},
+    {"sets", "Sakura Set", "Sakura Set", "2,310 [N/A]", "https://supremevalues.com/mm2/sets?item=Sakura_Set", "Stable", "-20"},
+    {"sets", "Sun Set", "Sun Set", "1,450 [N/A]", "https://supremevalues.com/mm2/sets?item=Sun_Set", "Stable", "-25"},
+    {"sets", "Full Ember Set", "Full Ember Set", "1,485 [1,430 - 1,540]", "https://supremevalues.com/mm2/sets?item=Full_Ember_Set", "Fluctuating", "+75"},
+    {"sets", "Soul Set", "Soul Set", "1,010 [990 - 1,010]", "https://supremevalues.com/mm2/sets?item=Soul_Set", "Underpaid For", "-20"},
+    {"sets", "Emberscythe Set", "Emberscythe Set", "1,350 [1,300 - 1,400]", "https://supremevalues.com/mm2/sets?item=Emberscythe_Set", "Fluctuating", "+75"},
+    {"sets", "Snow Set", "Snow Set", "1,040 [1,040 - 1,090]", "https://supremevalues.com/mm2/sets?item=Snow_Set", "Doing Well", "+25"},
+    {"sets", "Rainbow Set", "Rainbow Set", "805 [N/A]", "https://supremevalues.com/mm2/sets?item=Rainbow_Set", "Stable", "-10"},
+    {"sets", "Xeno Set", "Xeno Set", "800 [N/A]", "https://supremevalues.com/mm2/sets?item=Xeno_Set", "Stable", "-20"},
+    {"sets", "Bloom Set", "Bloom Set", "795 [N/A]", "https://supremevalues.com/mm2/sets?item=Bloom_Set", "Stable", "-10"},
+    {"sets", "Bauble Set", "Bauble Set", "740 [N/A]", "https://supremevalues.com/mm2/sets?item=Bauble_Set", "Stable", "-5"},
+    {"sets", "Embersickle Set", "Embersickle Set", "810 [780 - 840]", "https://supremevalues.com/mm2/sets?item=Embersickle_Set", "Fluctuating", "+25"},
+    {"sets", "Blizzard Set", "Blizzard Set", "500 [N/A]", "https://supremevalues.com/mm2/sets?item=Blizzard_Set", "Stable", "-10"},
+    {"sets", "Ocean Set", "Ocean Set", "475 [N/A]", "https://supremevalues.com/mm2/sets?item=Ocean_Set", "Stable", "-10"},
+    {"sets", "Flowerwood Set", "Flowerwood Set", "475 [N/A]", "https://supremevalues.com/mm2/sets?item=Flowerwood_Set", "Stable", "-10"},
+    {"sets", "Bow Set", "Bow Set", "470 [N/A]", "https://supremevalues.com/mm2/sets?item=Bow_Set", "Stable", "+10"},
+    {"sets", "Sweet Set", "Sweet Set", "305 [N/A]", "https://supremevalues.com/mm2/sets?item=Sweet_Set", "Stable", "-10"},
+    {"sets", "Borealis Set", "Borealis Set", "255 [N/A]", "https://supremevalues.com/mm2/sets?item=Borealis_Set", "Stable", "-10"},
+    {"sets", "Mortal Set", "Mortal Set", "240 [230 - 250]", "https://supremevalues.com/mm2/sets?item=Mortal_Set", "Fluctuating", "-10"},
+    {"sets", "Full Ice Set", "Full Ice Set", "287 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Ice_Set", "Stable", "+5"},
+    {"sets", "Corrupt Set", "Corrupt Set", "250 [N/A]", "https://supremevalues.com/mm2/sets?item=Corrupt_Set", "Stable", "+2"},
+    {"sets", "Bat Set", "Bat Set", "175 [N/A]", "https://supremevalues.com/mm2/sets?item=Bat_Set", "Stable", "+5"},
+    {"sets", "Pearl Set", "Pearl Set", "155 [N/A]", "https://supremevalues.com/mm2/sets?item=Pearl_Set", "Stable", "-10"},
+    {"sets", "Beach Set", "Beach Set", "130 [N/A]", "https://supremevalues.com/mm2/sets?item=Beach_Set", "Stable", "-10"},
+    {"sets", "Candy Set", "Candy Set", "115 [N/A]", "https://supremevalues.com/mm2/sets?item=Candy_Set", "Stable", "+3"},
+    {"sets", "Full Elderwood Set", "Full Elderwood Set", "97 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Elderwood_Set", "Stable", "-7"},
+    {"sets", "Ice Set", "Ice Set", "97 [N/A]", "https://supremevalues.com/mm2/sets?item=Ice_Set", "Stable", "-1"},
+    {"sets", "Elderwood Set", "Elderwood Set", "67 [N/A]", "https://supremevalues.com/mm2/sets?item=Elderwood_Set", "Stable", "-4"},
+    {"sets", "Spectre Set", "Spectre Set", "64 [N/A]", "https://supremevalues.com/mm2/sets?item=Spectre_Set", "Stable", "-6"},
+    {"sets", "Full Swirly Set", "Full Swirly Set", "65 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Swirly_Set", "Stable", "-3"},
+    {"sets", "Bringer Set", "Bringer Set", "64 [N/A]", "https://supremevalues.com/mm2/sets?item=Bringer_Set", "Stable", "-1"},
+    {"sets", "Swirly Set", "Swirly Set", "53 [N/A]", "https://supremevalues.com/mm2/sets?item=Swirly_Set", "Stable", "-3"},
+    {"sets", "Hallow Set", "Hallow Set", "50 [N/A]", "https://supremevalues.com/mm2/sets?item=Hallow_Set", "Stable", "-2"},
+    {"sets", "Old Glory Set", "Old Glory Set", "37 [N/A]", "https://supremevalues.com/mm2/sets?item=Old_Glory_Set", "Stable", "-1"},
+    {"sets", "Slasher Set", "Slasher Set", "37 [N/A]", "https://supremevalues.com/mm2/sets?item=Slasher_Set", "Stable", "-1"},
+    {"sets", "Iceflake Set", "Iceflake Set", "33 [N/A]", "https://supremevalues.com/mm2/sets?item=Iceflake_Set", "Stable", "-4"},
+    {"sets", "Plasma Set", "Plasma Set", "33 [N/A]", "https://supremevalues.com/mm2/sets?item=Plasma_Set", "Stable", "-2"},
+    {"sets", "Logchopper Set", "Logchopper Set", "30 [N/A]", "https://supremevalues.com/mm2/sets?item=Logchopper_Set", "Stable", "-1"},
+    {"sets", "Ginger Set (Godly)", "Ginger Set (Godly)", "30 [N/A]", "https://supremevalues.com/mm2/sets?item=Ginger_Set_Godly", "Stable", "-2"},
+    {"sets", "Virtual Set", "Virtual Set", "30 [N/A]", "https://supremevalues.com/mm2/sets?item=Virtual_Set", "Stable", "-3"},
+    {"sets", "Eternalcane Set", "Eternalcane Set", "26 [N/A]", "https://supremevalues.com/mm2/sets?item=Eternalcane_Set", "Stable", "-4"},
+    {"sets", "Cookie Set", "Cookie Set", "24 [N/A]", "https://supremevalues.com/mm2/sets?item=Cookie_Set", "Stable", "-1"},
+    {"sets", "Pumpkin Set", "Pumpkin Set", "403 [402 - 403]", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set", "Underpaid For", "-1"},
+    {"sets", "Latte Set", "Latte Set", "280 [N/A]", "https://supremevalues.com/mm2/sets?item=Latte_Set", "Stable", "-10"},
+    {"sets", "Bats Set", "Bats Set", "231 [N/A]", "https://supremevalues.com/mm2/sets?item=Bats_Set", "Stable", "-10"},
+    {"sets", "Zombified Set", "Zombified Set", "135 [N/A]", "https://supremevalues.com/mm2/sets?item=Zombified_Set", "Stable", "+5"},
+    {"sets", "Gingerbread Set [XMAS2019]", "Gingerbread Set", "86 [N/A]", "https://supremevalues.com/mm2/sets?item=Gingerbread_Set_XMAS2019", "Stable", "+5"},
+    {"sets", "Dark Set (Rare)", "Dark Set (Rare)", "66 [N/A]", "https://supremevalues.com/mm2/sets?item=Dark_Set_Rare", "Stable", "-5"},
+    {"sets", "Silent Night Set", "Silent Night Set", "62 [N/A]", "https://supremevalues.com/mm2/sets?item=Silent_Night_Set", "Stable", "-1"},
+    {"sets", "Spectral Set", "Spectral Set", "53 [N/A]", "https://supremevalues.com/mm2/sets?item=Spectral_Set", "Stable", "-5"},
+    {"sets", "Traveler Set", "Traveler Set", "53 [N/A]", "https://supremevalues.com/mm2/sets?item=Traveler_Set", "Stable", "-5"},
+    {"sets", "Aurora Set (Legend.)", "Aurora Set (Legend.)", "48 [N/A]", "https://supremevalues.com/mm2/sets?item=Aurora_Set_Legend.", "Stable", "-5"},
+    {"sets", "Vampire Set (Legend.)", "Vampire Set (Legend.)", "48 [N/A]", "https://supremevalues.com/mm2/sets?item=Vampire_Set_Legend.", "Stable", "-5"},
+    {"sets", "Pumpkin Set (2020)", "Pumpkin Set (2020)", "39 [N/A]", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2020", "Stable", "-3"},
+    {"sets", "Pumpkin Set (2021)", "Pumpkin Set (2021)", "32 [N/A]", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2021", "Stable", "-3"},
+    {"sets", "Wrap Set", "Wrap Set", "24 [N/A]", "https://supremevalues.com/mm2/sets?item=Wrap_Set", "Stable", "+4"},
+    {"sets", "Gingerbread Set [XMAS2020]", "Gingerbread Set", "13 [N/A]", "https://supremevalues.com/mm2/sets?item=Gingerbread_Set_XMAS2020", "Stable", "+3"},
+    {"sets", "Aurora Set (Rare)", "Aurora Set (Rare)", "8 [N/A]", "https://supremevalues.com/mm2/sets?item=Aurora_Set_Rare", "Stable", "-1"},
+    {"sets", "Cavern Set", "Cavern Set", "8 [N/A]", "https://supremevalues.com/mm2/sets?item=Cavern_Set", "Stable", "-1"},
+    {"sets", "Toxic Set", "Toxic Set", "7 [N/A]", "https://supremevalues.com/mm2/sets?item=Toxic_Set", "Stable", "-2"},
+    {"sets", "Ghost Set", "Ghost Set", "7 [N/A]", "https://supremevalues.com/mm2/sets?item=Ghost_Set", "Stable", "-1"},
+    {"sets", "Pumpkin Set (2019)", "Pumpkin Set (2019)", "7 [5 - 7]", "https://supremevalues.com/mm2/sets?item=Pumpkin_Set_2019", "Underpaid For", "-2"},
+    {"sets", "Icedriller Set", "Icedriller Set", "6 [N/A]", "https://supremevalues.com/mm2/sets?item=Icedriller_Set", "Stable", "-3"},
+    {"sets", "Full Elite Set", "Full Elite Set", "6 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Elite_Set", "Stable", "-2"},
+    {"sets", "Santas Set (Legend.)", "Santa's Set (Legend.)", "6 [N/A]", "https://supremevalues.com/mm2/sets?item=Santas_Set_Legend.", "Stable", "-4"},
+    {"sets", "Scratch Set", "Scratch Set", "5 [N/A]", "https://supremevalues.com/mm2/sets?item=Scratch_Set", "Stable", "-1"},
+    {"sets", "Zombie Set", "Zombie Set", "6 [N/A]", "https://supremevalues.com/mm2/sets?item=Zombie_Set", "Stable", "-2"},
+    {"sets", "Eye Set", "Eye Set", "6 [4 - 6]", "https://supremevalues.com/mm2/sets?item=Eye_Set", "Underpaid For", "-2"},
+    {"sets", "Snakebite Set", "Snakebite Set", "4 [N/A]", "https://supremevalues.com/mm2/sets?item=Snakebite_Set", "Stable", "-2"},
+    {"sets", "Vampire Set (Rare)", "Vampire Set (Rare)", "4 [N/A]", "https://supremevalues.com/mm2/sets?item=Vampire_Set_Rare", "Stable", "-2"},
+    {"sets", "Frozen Set", "Frozen Set", "4 [N/A]", "https://supremevalues.com/mm2/sets?item=Frozen_Set", "Stable", "-2"},
+    {"sets", "Marble Set", "Marble Set", "4 [N/A]", "https://supremevalues.com/mm2/sets?item=Marble_Set", "Stable", "-1"},
+    {"sets", "Potion Set", "Potion Set", "4 [N/A]", "https://supremevalues.com/mm2/sets?item=Potion_Set", "Stable", "-2"},
+    {"sets", "Candy Swirl Set", "Candy Swirl Set", "3 [N/A]", "https://supremevalues.com/mm2/sets?item=Candy_Swirl_Set", "Stable", "-1"},
+    {"sets", "Lights Set", "Lights Set", "3 [N/A]", "https://supremevalues.com/mm2/sets?item=Lights_Set", "Stable", "-1"},
+    {"sets", "Mummy Set", "Mummy Set", "3 [N/A]", "https://supremevalues.com/mm2/sets?item=Mummy_Set", "Stable", "-1"},
+    {"sets", "Grave Set", "Grave Set", "2 [N/A]", "https://supremevalues.com/mm2/sets?item=Grave_Set", "Stable", "-1"},
+    {"sets", "Haunted Set", "Haunted Set", "2 [N/A]", "https://supremevalues.com/mm2/sets?item=Haunted_Set", "Stable", "-2"},
+    {"sets", "Slime Set", "Slime Set", "2 [N/A]", "https://supremevalues.com/mm2/sets?item=Slime_Set", "Stable", "-1"},
+    {"sets", "Full Bringer Set", "Full Bringer Set", "189 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Bringer_Set", "Stable", "-1"},
+    {"sets", "Full Luger Set", "Full Luger Set", "158 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Luger_Set", "Stable", "+2"},
+    {"sets", "Sparkle Set", "Sparkle Set", "127 [N/A]", "https://supremevalues.com/mm2/sets?item=Sparkle_Set", "Stable", "+2"},
+    {"sets", "Luger Set", "Luger Set", "108 [N/A]", "https://supremevalues.com/mm2/sets?item=Luger_Set", "Stable", "+2"},
+    {"sets", "Retro Set", "Retro Set", "70 [N/A]", "https://supremevalues.com/mm2/sets?item=Retro_Set", "Stable", "+0"},
+    {"sets", "Vintage Set", "Vintage Set", "59 [N/A]", "https://supremevalues.com/mm2/sets?item=Vintage_Set", "Stable", "-2"},
+    {"sets", "Full Colored Seer Set", "Full Colored Seer Set", "43 [N/A]", "https://supremevalues.com/mm2/sets?item=Full_Colored_Seer_Set", "Stable", "-1"},
+    {"sets", "Eternal Set", "Eternal Set", "43 [N/A]", "https://supremevalues.com/mm2/sets?item=Eternal_Set", "Stable", "-8"},
+    {"sets", "Skate Set", "Skate Set", "23 [N/A]", "https://supremevalues.com/mm2/sets?item=Skate_Set", "Stable", "-2"},
+    {"sets", "Pals Set", "Pals Set", "20 [N/A]", "https://supremevalues.com/mm2/sets?item=Pals_Set", "Stable", "+4"},
+    {"sets", "Colored Seer Set", "Colored Seer Set", "16 [N/A]", "https://supremevalues.com/mm2/sets?item=Colored_Seer_Set", "Stable", "-6"},
+    {"sets", "Wrapping Paper Set", "Wrapping Paper Set", "14 [N/A]", "https://supremevalues.com/mm2/sets?item=Wrapping_Paper_Set", "Stable", "-2"},
+    {"sets", "Small Set (107)", "Small Set (107)", "1,300 [1,250 - 1,350]", "https://supremevalues.com/mm2/sets?item=Small_Set_107", "Fluctuating", "+30"},
+    {"sets", "Small Set (103)", "Small Set (103)", "1,235 [1,185 - 1,285]", "https://supremevalues.com/mm2/sets?item=Small_Set_103", "Fluctuating", "-5"},
+    {"sets", "Full Chroma Set", "Full Chroma Set", "550 [545 - 550]", "https://supremevalues.com/mm2/sets?item=Full_Chroma_Set", "Underpaid For", "-5"},
+    {"sets", "Chroma Weapon Set", "Chroma Weapon Set", "530 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Weapon_Set", "Stable", "-5"},
     {"evos", "Synthwave", "Synthwave (Var. 4)", "N/A", "https://supremevalues.com/mm2/evos", nil, nil},
     {"evos", "Synthwave", "Synthwave (Var. 3)", "N/A", "https://supremevalues.com/mm2/evos", nil, nil},
     {"evos", "Synthwave", "Synthwave (Var. 2)", "N/A", "https://supremevalues.com/mm2/evos", nil, nil},
@@ -1467,7 +1467,7 @@ local items = {
 }
 
 -- LocalScript: value labels + a trade comparison overlay.
--- Snapshot: Supreme Values, November 9, 2026. Not live; verify before trading.
+-- Snapshot: Supreme Values pages reported November 17, 2026 at 3:32 PM. Static values; verify on the source before trading.
 -- Six inventory icons mapped from the user-provided UI diagnostic and screenshot.
 -- Unknown variants use clearly marked rarity-filtered estimates; they may be far off.
 -- Numeric values under 1 are model estimates, not official exact prices.
@@ -1594,7 +1594,8 @@ end
 local function numberText(n)
     n = math.abs(n)
     if n > 0 and n < 0.005 then return "<0.01" end
-    return string.format("%.2f", n)
+    local formatted = string.format("%.2f", n)
+    return (formatted:gsub("%.?0+$", ""))
 end
 -- Inventory colors observed in the supplied screenshot/diagnostic only.
 -- An unrecognized color is never treated as evidence of rarity.
@@ -1787,7 +1788,7 @@ local function valueRange(name, label)
     if #values == 0 then return nil end
     table.sort(values)
     local ambiguous = unpriced or (values[#values] - values[1] > 0.0000001)
-    -- Auto Offer refuses ambiguous values rather than guessing.
+    -- Ambiguous values are left unpriced rather than guessed.
     if unpriced then return nil end
     if ambiguous then return nil end
     return values[1], values[1], approx, false, (#group == 1 and group[1] or nil)
@@ -1810,126 +1811,103 @@ end
 updateBadge = function(label)
     if not label:IsA("TextLabel") or label.Name == BADGE_NAME or label.Name == STATUS_NAME or label.Name == CHANGE_NAME then return end
     if label:FindFirstAncestor(SCREEN_NAME) or label:FindFirstAncestor(PICKER_NAME) then return end
+
     local low, high, approximate, guessed, matchedItem = valueRange(label.Text, label)
     local choices = pickerChoices(label)
     local id = iconIdFromLabel(label)
     local chosen = id and pickedIcons[normalize(label.Text) .. "|" .. id] or pickedLabels[label]
     local canChoose = #choices > 1 and (not matchedItem or chosen ~= nil)
-    local badge = label:FindFirstChild(BADGE_NAME)
+    local isCardItem = isItemLabel(label)
+    local card = isCardItem and label.Parent.Parent or nil
+    local badgeParent = card or label
+
+    -- Upgrade legacy badges from the previous build and place prices on the card itself.
+    if card then
+        local legacy = label:FindFirstChild(BADGE_NAME)
+        if legacy then legacy:Destroy() end
+    end
+    local badge = badgeParent:FindFirstChild(BADGE_NAME)
     if badge and not badge:IsA("TextButton") then badge:Destroy(); badge = nil end
-    if not candidates(label.Text) and not (isItemLabel(label) and cardCategory(label)) then
+
+    if not candidates(label.Text) and not (isCardItem and cardCategory(label)) then
         if badge then badge:Destroy() end
         for _, name in ipairs({STATUS_NAME, CHANGE_NAME}) do
             local stale = label:FindFirstChild(name)
             if stale then stale:Destroy() end
-            if isItemLabel(label) then
-                stale = label.Parent.Parent:FindFirstChild(name)
+            if card then
+                stale = card:FindFirstChild(name)
                 if stale then stale:Destroy() end
             end
         end
         return
     end
-    if not badge then
+
+    local hideSmallValue = low and high and (low < 1 or high < 1)
+    local showPrice = low and high and not hideSmallValue
+    local showPickerMark = canChoose and not showPrice
+    if not showPrice and not showPickerMark then
+        if badge then badge:Destroy(); badge = nil end
+    elseif not badge then
         badge = Instance.new("TextButton")
         badge.AutoButtonColor = false
         badge.Name = BADGE_NAME
-        badge.Position = UDim2.new(0, 1, 0, -25)
-        badge.Size = UDim2.new(1, -2, 0, 23)
         badge.BackgroundColor3 = Color3.fromRGB(20, 23, 29)
-        badge.BackgroundTransparency = 0.10
+        badge.BackgroundTransparency = 1
         badge.BorderSizePixel = 0
         badge.TextColor3 = Color3.fromRGB(255, 226, 135)
-        badge.TextStrokeTransparency = 0.72
+        badge.TextStrokeTransparency = 0.35
         badge.Font = Enum.Font.GothamBold
-        badge.TextSize = 15
+        badge.TextSize = 18
         badge.TextScaled = true
         badge.TextWrapped = false
-        local textLimit = Instance.new("UITextSizeConstraint")
-        textLimit.MinTextSize = 8
-        textLimit.MaxTextSize = 15
-        textLimit.Parent = badge
-        badge.ZIndex = label.ZIndex + 1
-        badge.Parent = label
+        badge.ZIndex = math.max(card and card.ZIndex or label.ZIndex, label.ZIndex) + 3
+        badge.Parent = badgeParent
         badge.Activated:Connect(function()
             if badge.Active and showVariantPicker then showVariantPicker(label) end
         end)
     end
-    badge.Active = canChoose
-    if canChoose and not low then
-        badge.BackgroundColor3 = Color3.fromRGB(46, 76, 123)
-        badge.TextColor3 = Color3.fromRGB(245, 249, 255)
-        badge.Text = "ВЫБРАТЬ ▾"
-    elseif low and high and math.abs(high - low) > 0.0000001 then
-        -- A single price would identify an unverified gun/knife/year.
-        badge.Text = "IDENTITY N/A"
-    else
-        badge.BackgroundColor3 = Color3.fromRGB(20, 23, 29)
-        badge.TextColor3 = Color3.fromRGB(255, 226, 135)
-        badge.Text = low and ((guessed and "EST: " or "Value: ") .. (approximate and "~" or "") .. rangeText(low, high) .. (canChoose and " ▾" or "")) or "Value: N/A"
+
+    if badge then
+        badge.BackgroundTransparency = 1
+        badge.Font = Enum.Font.GothamBold
+        badge.TextScaled = true
+        badge.TextWrapped = false
+        badge.TextStrokeTransparency = 0.35
+        badge.ZIndex = math.max(card and card.ZIndex or label.ZIndex, label.ZIndex) + 3
+        local textLimit = badge:FindFirstChildOfClass("UITextSizeConstraint")
+        if not textLimit then
+            textLimit = Instance.new("UITextSizeConstraint")
+            textLimit.Parent = badge
+        end
+        textLimit.MinTextSize = showPickerMark and 13 or 14
+        textLimit.MaxTextSize = showPickerMark and 16 or 19
+        badge.Active = canChoose
+        if showPickerMark then
+            badge.Position = card and UDim2.new(1, -23, 0, 2) or UDim2.new(1, -22, 0, -25)
+            badge.Size = UDim2.fromOffset(21, 21)
+            badge.TextSize = 16
+            badge.TextColor3 = Color3.fromRGB(255, 226, 135)
+            badge.Text = "?"
+        else
+            badge.Position = card and UDim2.new(0, 0, 0, 2) or UDim2.new(0, 1, 0, -25)
+            badge.Size = card and UDim2.new(1, 0, 0, 25) or UDim2.new(1, -2, 0, 23)
+            badge.TextSize = 18
+            badge.TextXAlignment = Enum.TextXAlignment.Center
+            badge.TextColor3 = Color3.fromRGB(255, 226, 135)
+            local shown = rangeText(low, high)
+            if approximate or guessed then shown = "~" .. shown end
+            badge.Text = shown
+        end
     end
-    if not isItemLabel(label) then return end
-    local card = label.Parent.Parent
-    -- Remove corner labels created by older versions; new labels live just above
-    -- the price, leaving the card's upper-right quantity unobstructed.
-    for _, name in ipairs({STATUS_NAME, CHANGE_NAME}) do
-        local old = card:FindFirstChild(name)
-        if old then old:Destroy() end
-    end
-    local node, inOffer, inTradeGui = label, false, false
-    while node and node ~= playerGui do
-        if node.Name == "YourOffer" or node.Name == "TheirOffer" then inOffer = true end
-        if node.Name == "TradeGUI" or node.Name == "TradeGUI_Phone" then inTradeGui = true end
-        node = node.Parent
-    end
-    local function removeCardLabels()
+
+    -- Keep the item cards visually close to the reference: only the centered price remains.
+    if card then
         for _, name in ipairs({STATUS_NAME, CHANGE_NAME}) do
-            local existing = label:FindFirstChild(name)
-            if existing then existing:Destroy() end
+            local old = card:FindFirstChild(name)
+            if old then old:Destroy() end
+            old = label:FindFirstChild(name)
+            if old then old:Destroy() end
         end
-    end
-    if not (inOffer and inTradeGui) then removeCardLabels(); return end
-    local function cornerLabel(name, right)
-        local field = label:FindFirstChild(name)
-        if field and not field:IsA("TextLabel") then field:Destroy(); field = nil end
-        if not field then
-            field = Instance.new("TextLabel")
-            field.Name = name
-            field.Position = right and UDim2.new(0.42, 1, 0, -48) or UDim2.new(0, 2, 0, -48)
-            field.Size = right and UDim2.new(0.58, -3, 0, 21) or UDim2.new(0.42, -3, 0, 21)
-            field.BackgroundColor3 = Color3.fromRGB(20, 23, 29)
-            field.BackgroundTransparency = 0.10
-            field.BorderSizePixel = 0
-            field.Font = Enum.Font.GothamBold
-            field.TextStrokeTransparency = 0.72
-            field.TextScaled = true
-            field.TextWrapped = false
-            local limit = Instance.new("UITextSizeConstraint")
-            limit.MinTextSize = 7
-            limit.MaxTextSize = 14
-            limit.Parent = field
-            field.ZIndex = math.max(card.ZIndex, label.ZIndex) + 3
-            field.Parent = label
-        end
-        return field
-    end
-    local status = cornerLabel(STATUS_NAME, true)
-    local change = cornerLabel(CHANGE_NAME, false)
-    status.TextColor3 = Color3.fromRGB(239, 243, 248)
-    status.Text = matchedItem and (matchedItem[6] or "N/A") or "N/A"
-    local rawChange = matchedItem and matchedItem[7]
-    local changeNumber = rawChange and tonumber((rawChange:gsub(",", "")))
-    if changeNumber and changeNumber > 0 then
-        change.Text = "▲ " .. rawChange
-        change.TextColor3 = Color3.fromRGB(119, 235, 163)
-    elseif changeNumber and changeNumber < 0 then
-        change.Text = "▼ " .. rawChange
-        change.TextColor3 = Color3.fromRGB(255, 125, 125)
-    elseif changeNumber == 0 then
-        change.Text = "— 0"
-        change.TextColor3 = Color3.fromRGB(200, 200, 200)
-    else
-        change.Text = "Δ N/A"
-        change.TextColor3 = Color3.fromRGB(200, 200, 200)
     end
 end
 
@@ -1942,7 +1920,16 @@ showVariantPicker = function(label)
     local originalId = iconIdFromLabel(label)
     local icon = label.Parent.Parent:FindFirstChild("Icon", true)
     local iconImage = icon and (icon:IsA("ImageLabel") or icon:IsA("ImageButton")) and icon.Image or ""
-    table.sort(choices, function(a,b)
+    local rarityOrder = {
+        uniques=1, chromas=2, ancients=3, godlies=4, vintages=5,
+        legendaries=6, rares=7, uncommons=8, commons=9, pets=10,
+    }
+    table.sort(choices, function(a, b)
+        local ar, br = rarityOrder[a[1]] or 99, rarityOrder[b[1]] or 99
+        if ar ~= br then return ar < br end
+        local av = itemValue(a[4]) or -1
+        local bv = itemValue(b[4]) or -1
+        if av ~= bv then return av > bv end
         local ak, bk = candidateKind(a) or "", candidateKind(b) or ""
         if ak ~= bk then return ak < bk end
         return a[2] < b[2]
@@ -2041,8 +2028,8 @@ showVariantPicker = function(label)
         name.Font = Enum.Font.SourceSansBold
         text(button, item[2], UDim2.fromOffset(12, 29), UDim2.new(0.65, -12, 0, 20), 16, Color3.fromRGB(218, 227, 241))
         local value, approx = itemValue(item[4])
-        local priceText = value and ((approx and "~" or "") .. numberText(value)) or "N/A"
-        local price = text(button, priceText, UDim2.new(0.65, 0, 0, 9), UDim2.new(0.35, -12, 0, 24), 20, Color3.fromRGB(255, 225, 138))
+        local priceText = value and value >= 1 and ((approx and "~" or "") .. numberText(value)) or ""
+        local price = text(button, priceText, UDim2.new(0.65, 0, 0, 9), UDim2.new(0.35, -12, 0, 24), 18, Color3.fromRGB(255, 225, 138))
         price.Font = Enum.Font.SourceSansBold
         price.TextXAlignment = Enum.TextXAlignment.Right
         local detail = "Supreme: " .. (item[4] or "N/A") .. "   •   " .. (item[6] or "N/A")
@@ -2097,45 +2084,119 @@ screen.IgnoreGuiInset = true
 screen.DisplayOrder = 1000
 screen.Parent = playerGui
 
-local panel = Instance.new("Frame")
-panel.Name = "Summary"
-panel.BackgroundColor3 = Color3.fromRGB(24, 27, 35)
-panel.BackgroundTransparency = 0.05
-panel.BorderSizePixel = 0
-panel.Active = false
-panel.Visible = false
-panel.Parent = screen
-local corner = Instance.new("UICorner")
-corner.CornerRadius = UDim.new(0, 8)
-corner.Parent = panel
-local stroke = Instance.new("UIStroke")
-stroke.Thickness = 1.5
-stroke.Parent = panel
-
-local function makeText(name, position, size, fontSize)
+local function makeText(name, fontSize)
     local label = Instance.new("TextLabel")
     label.Name = name
-    label.Position = position
-    label.Size = size
     label.BackgroundTransparency = 1
     label.Font = Enum.Font.GothamBold
     label.TextSize = fontSize
     label.TextScaled = true
     label.TextWrapped = false
-    label.Active = false
-    label.Parent = panel
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    label.TextYAlignment = Enum.TextYAlignment.Center
+    label.TextColor3 = Color3.fromRGB(255, 226, 135)
+    label.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+    label.TextStrokeTransparency = 0.35
+    label.ZIndex = 100
+    label.Visible = false
+    label.Parent = screen
     local limit = Instance.new("UITextSizeConstraint")
     limit.MaxTextSize = fontSize
-    limit.MinTextSize = 8
+    limit.MinTextSize = 16
     limit.Parent = label
     return label
 end
-local result = makeText("Result", UDim2.new(0, 4, 0, 2), UDim2.new(1, -8, 1, -4), 20)
 
-local GREEN = Color3.fromRGB(90, 230, 140)
-local RED = Color3.fromRGB(255, 105, 105)
-local NEUTRAL = Color3.fromRGB(220, 225, 235)
-local WARNING = Color3.fromRGB(255, 200, 85)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
+
+-- Each offer total is shown beside its heading, in the same row.
+local result = makeText("YourOfferEquation", 25)
+local details = makeText("TheirOfferEquation", 25)
+
+local function isVisibleInside(object, root)
+    local node = object
+    while node do
+        if node:IsA("GuiObject") and not node.Visible then return false end
+        if node == root then return true end
+        node = node.Parent
+    end
+    return false
+end
+
+local function findOfferHeading(trade, offer, phrase)
+    -- Prefer the title contained by this exact offer; never match a hidden or
+    -- unrelated heading elsewhere in the trade window.
+    for _, object in ipairs(offer:GetDescendants()) do
+        if (object:IsA("TextLabel") or object:IsA("TextButton"))
+            and isVisibleInside(object, offer)
+            and normalize(object.Text):find(phrase, 1, true) then
+            return object
+        end
+    end
+    -- Some layouts keep the title beside the offer frame. In that case accept
+    -- only a visible matching label close to this offer's own top edge.
+    for _, object in ipairs(trade:GetDescendants()) do
+        if (object:IsA("TextLabel") or object:IsA("TextButton"))
+            and isVisibleInside(object, trade)
+            and normalize(object.Text):find(phrase, 1, true)
+            and math.abs(object.AbsolutePosition.Y - offer.AbsolutePosition.Y) <= 36
+            and math.abs(object.AbsolutePosition.X - offer.AbsolutePosition.X) <= 40 then
+            return object
+        end
+    end
+    return nil
+end
+
+local function placeEquation(label, trade, offer, phrase, text)
+    local container = offer and offer:FindFirstChild("Container")
+    local heading = trade and offer and findOfferHeading(trade, offer, phrase)
+    if not container or not container:IsA("GuiObject") or not container.Visible or not heading then
+        label.Visible = false
+        return
+    end
+    -- Put the equation on the same header line as YOUR OFFER / THEIR OFFER,
+    -- never over an empty item slot. Limit the other-side line before its username.
+    local headingTextWidth = math.max(heading.TextBounds.X, 112)
+    local x = heading.AbsolutePosition.X + headingTextWidth + 8
+    local right = container.AbsolutePosition.X + container.AbsoluteSize.X - 4
+    local root = heading.Parent
+    if root then
+        for _, object in ipairs(root:GetDescendants()) do
+            if object ~= heading and (object:IsA("TextLabel") or object:IsA("TextButton")) and object.Visible then
+                local otherText = normalize(object.Text)
+                local sameRow = math.abs(object.AbsolutePosition.Y - heading.AbsolutePosition.Y) <= 8
+                if sameRow and object.AbsolutePosition.X > x and otherText:match("^%(") then
+                    right = math.min(right, object.AbsolutePosition.X - 6)
+                end
+            end
+        end
+    end
+    local width = math.max(1, right - x)
+    label.Position = UDim2.fromOffset(x, heading.AbsolutePosition.Y)
+    label.Size = UDim2.fromOffset(width, math.max(18, heading.AbsoluteSize.Y))
+    label.Text = text
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    label.Visible = text ~= nil and text ~= ""
+end
+
+local function currencyText(n)
+    n = math.abs(n)
+    if n > 0 and n < 0.005 then return "<0.01" end
+    local formatted = string.format("%.2f", n)
+    local integer, decimals = formatted:match("^(%d+)%.(%d+)$")
+    integer = integer:reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+    if decimals == "00" then return integer end
+    return integer .. "." .. decimals
+end
+
+local function sideTotalText(side)
+    if not side or side.unknown > 0 then return "?" end
+    if side.low < 1 or side.high < 1 then return "0" end
+    local low, high = currencyText(side.low), currencyText(side.high)
+    local amount = low == high and low or (low .. "–" .. high)
+    if side.estimated or side.guessed then amount = "~" .. amount end
+    return amount
+end
 
 local function visible(object)
     local node = object
@@ -2152,12 +2213,16 @@ local function findTrade()
         local root = playerGui:FindFirstChild(guiName)
         local container = root and root:FindFirstChild("Container")
         local trade = container and container:FindFirstChild("Trade")
-        if trade and trade:IsA("GuiObject") and visible(trade) then return trade end
+        if trade and trade:IsA("GuiObject") and visible(trade) then
+            -- Match the game trade GUI inset so absolute header coordinates align.
+            local sourceScreen = trade:FindFirstAncestorOfClass("ScreenGui")
+            if sourceScreen then screen.IgnoreGuiInset = sourceScreen.IgnoreGuiInset end
+            return trade
+        end
     end
     return nil
 end
 
--- Returns nil for conflicting counts rather than silently guessing.
 local function countInCard(card)
     local count
     for _, object in ipairs(card:GetDescendants()) do
@@ -2178,6 +2243,7 @@ local function calculate(offer)
     local container = offer and offer:FindFirstChild("Container")
     if not container then return nil end
     local low, high, unknown, count, estimated, guessed = 0, 0, 0, 0, false, false
+    local parts, hiddenSmall = {}, false
     for _, card in ipairs(container:GetChildren()) do
         if card:IsA("GuiObject") and visible(card) then
             local itemName = card:FindFirstChild("ItemName")
@@ -2189,10 +2255,16 @@ local function calculate(offer)
                     local minValue, maxValue, approximate, guess = valueRange(name, label)
                     local quantity = countInCard(card)
                     if minValue and quantity then
-                        low = low + minValue * quantity
-                        high = high + maxValue * quantity
+                        local itemLow, itemHigh = minValue * quantity, maxValue * quantity
+                        low = low + itemLow
+                        high = high + itemHigh
                         estimated = estimated or approximate
                         guessed = guessed or guess
+                        if itemLow >= 1 and itemHigh >= 1 then
+                            table.insert(parts, itemLow == itemHigh and currencyText(itemLow) or (currencyText(itemLow) .. "–" .. currencyText(itemHigh)))
+                        else
+                            hiddenSmall = true
+                        end
                     else
                         unknown = unknown + 1
                     end
@@ -2204,494 +2276,51 @@ local function calculate(offer)
             end
         end
     end
-    return {low = low, high = high, unknown = unknown, count = count, estimated = estimated, guessed = guessed}
+    return {low=low, high=high, unknown=unknown, count=count, estimated=estimated, guessed=guessed, parts=parts, hiddenSmall=hiddenSmall}
 end
 
-local function setResult(text, color)
-    result.Text = text
-    result.TextColor3 = color
-    stroke.Color = color
+local function sideEquation(side)
+    if not side then return "?" end
+    local terms = {}
+    for i, part in ipairs(side.parts or {}) do
+        if i <= 3 then table.insert(terms, part) end
+    end
+    if #terms < #(side.parts or {}) or side.hiddenSmall then table.insert(terms, "…") end
+    if side.unknown > 0 then
+        if #terms > 0 then return table.concat(terms, " + ") .. " + ?" end
+        return "?"
+    end
+    if #terms == 0 then return side.count == 0 and "0" or sideTotalText(side) end
+    return table.concat(terms, " + ") .. " = " .. sideTotalText(side)
 end
 
 local function refresh()
     local trade = findTrade()
-    if not trade then panel.Visible = false; return end
-    local width = math.max(1, math.min(220, trade.AbsoluteSize.X - 12))
-    panel.Size = UDim2.fromOffset(width, 34)
-    panel.Position = UDim2.fromOffset(
-        trade.AbsolutePosition.X + trade.AbsoluteSize.X - width - 6,
-        math.max(0, trade.AbsolutePosition.Y + 6))
-    panel.Visible = true
-    local mine = calculate(trade:FindFirstChild("YourOffer"))
-    local theirs = calculate(trade:FindFirstChild("TheirOffer"))
-    if not mine or not theirs or mine.unknown + theirs.unknown > 0 then
-        setResult("NO DATA", WARNING)
+    if not trade then
+        result.Visible = false
+        details.Visible = false
         return
     end
-    if mine.count + theirs.count == 0 then
-        setResult("FAIR 0.00", NEUTRAL)
-        return
-    end
-    if math.abs(mine.high - mine.low) > 0.0000001 or math.abs(theirs.high - theirs.low) > 0.0000001 then
-        setResult("IDENTITY N/A", WARNING)
-        return
-    end
-    local prefix = (mine.estimated or theirs.estimated) and "~" or ""
-    local confidence = (mine.guessed or theirs.guessed) and "EST " or ""
-    local low = theirs.low - mine.high
-    local high = theirs.high - mine.low
-    local epsilon = 0.0000001
-    if low > epsilon then
-        local a, b = numberText(low), numberText(high)
-        setResult(confidence .. "WIN " .. prefix .. (a == b and ("+" .. a) or ("+" .. a .. "..+" .. b)), GREEN)
-    elseif high < -epsilon then
-        local a, b = numberText(-high), numberText(-low)
-        setResult(confidence .. "LOSS " .. prefix .. (a == b and ("-" .. a) or ("-" .. a .. "..-" .. b)), RED)
-    elseif math.abs(low) <= epsilon and math.abs(high) <= epsilon then
-        setResult(confidence .. "FAIR " .. prefix .. "0.00", NEUTRAL)
-    else
-        -- Possible outcomes cross zero: a win/loss sign would be a guess.
-        setResult("NO DATA", WARNING)
-    end
+    local mineOffer = trade:FindFirstChild("YourOffer")
+    local theirsOffer = trade:FindFirstChild("TheirOffer")
+    local mine = calculate(mineOffer)
+    local theirs = calculate(theirsOffer)
+    -- Show both totals only after the other player adds an item to their offer.
+    local receiving = theirs and theirs.count > 0
+    local mineText = receiving and mine and sideTotalText(mine) or nil
+    local theirsText = receiving and sideTotalText(theirs) or nil
+    placeEquation(result, trade, mineOffer, "your offer", mineText)
+    placeEquation(details, trade, theirsOffer, "their offer", theirsText)
 end
 
 task.spawn(function()
     while screen.Parent do
         local ok, err = pcall(refresh)
         if not ok then
-            panel.Visible = true
-            setResult("NO DATA", WARNING)
+            result.Visible = false
+            details.Visible = false
             warn("Supreme trade comparison: " .. tostring(err))
         end
         task.wait(0.5)
-    end
-end)
-
--- Supreme Values trading servers: first 25 Any Ages links, snapshot 2026-11-09.
--- The public privateServerLinkCode is a web invitation, not a reserved server
--- access code. It cannot safely be passed to TeleportToPrivateServer.
--- Select a server, then open the copied URL in a browser to join.
-local SERVER_MENU_NAME = "SupremeServerMenu"
-local oldMenu = playerGui:FindFirstChild(SERVER_MENU_NAME)
-if oldMenu then oldMenu:Destroy() end
-local serverCodes = {
-    "52535878618270720473578279303178", "54799769711405621473213998836440",
-    "61933501992546440005599366103766", "13113133940613962370826214325476",
-    "63049112374788245951787857306877", "24132143599835760760738116757946",
-    "00831528706129916784486944219884", "84950241111058864425231954137537",
-    "94528216659379516128229796412065", "83790563227803528593126440666166",
-    "96307194810632098115459270158670", "46966801033871232814565308127808",
-    "49368412220502266107076617131771", "22126709610630667074088729724269",
-    "71706859751054342558011364361018", "39453721300264941717459752255279",
-    "09092497671595857493248215670485", "16375271006722939895436541548620",
-    "70937024820465558770104584690576", "11217705241861804641387473011081",
-    "97623560615115270752925815482132", "98085013903720930168314011453132",
-    "85648262521485078115174408913052", "22976196794613609215367500563537",
-    "06508302616273982012443429291768",
-}
-local menu = Instance.new("ScreenGui")
-menu.Name = SERVER_MENU_NAME
-menu.ResetOnSpawn = false
-menu.DisplayOrder = 1001
-menu.Parent = playerGui
-
-local toggle = Instance.new("TextButton")
-toggle.Name = "Toggle"
-toggle.Size = UDim2.fromOffset(125, 38)
-toggle.Position = UDim2.new(0, 12, 0.5, -17)
-toggle.BackgroundColor3 = Color3.fromRGB(62, 95, 164)
-toggle.TextColor3 = Color3.new(1, 1, 1)
-toggle.Font = Enum.Font.GothamBold
-toggle.TextSize = 15
-toggle.Text = "SERVERS"
-toggle.Parent = menu
-local toggleRound = Instance.new("UICorner"); toggleRound.CornerRadius = UDim.new(0, 6); toggleRound.Parent = toggle
-
-local menuFrame = Instance.new("Frame")
-menuFrame.Name = "Menu"
-menuFrame.Size = UDim2.new(0.85, 0, 0.72, 0)
-menuFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-menuFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-menuFrame.BackgroundColor3 = Color3.fromRGB(25, 28, 36)
-menuFrame.BorderSizePixel = 0
-menuFrame.Visible = false
-menuFrame.Parent = menu
-local sizeLimit = Instance.new("UISizeConstraint"); sizeLimit.MaxSize = Vector2.new(440, 520); sizeLimit.Parent = menuFrame
-local menuRound = Instance.new("UICorner"); menuRound.CornerRadius = UDim.new(0, 8); menuRound.Parent = menuFrame
-
-local header = Instance.new("TextLabel")
-header.Size = UDim2.new(1, -48, 0, 38)
-header.Position = UDim2.fromOffset(12, 2)
-header.BackgroundTransparency = 1
-header.TextXAlignment = Enum.TextXAlignment.Left
-header.Font = Enum.Font.GothamBold
-header.TextSize = 17
-header.TextColor3 = Color3.new(1, 1, 1)
-header.Text = "Supreme servers (25)  |  drag here"
-header.Active = true
-header.Parent = menuFrame
-
--- Drag by the header with a mouse or touch, without interfering with scrolling.
-local UserInputService = game:GetService("UserInputService")
-local dragging, dragInput, dragStart, startPosition = false, nil, nil, nil
-header.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        dragging = true
-        dragStart = input.Position
-        startPosition = menuFrame.Position
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-                dragInput = nil
-            end
-        end)
-    end
-end)
-header.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        dragInput = input
-    end
-end)
-UserInputService.InputChanged:Connect(function(input)
-    if dragging and input == dragInput and dragStart and startPosition then
-        local delta = input.Position - dragStart
-        menuFrame.Position = UDim2.new(startPosition.X.Scale, startPosition.X.Offset + delta.X, startPosition.Y.Scale, startPosition.Y.Offset + delta.Y)
-    end
-end)
-local closeMenu = Instance.new("TextButton")
-closeMenu.Position = UDim2.new(1, -36, 0, 4)
-closeMenu.Size = UDim2.fromOffset(30, 30)
-closeMenu.BackgroundColor3 = Color3.fromRGB(80, 85, 96)
-closeMenu.TextColor3 = Color3.new(1, 1, 1)
-closeMenu.Font = Enum.Font.GothamBold
-closeMenu.TextSize = 16
-closeMenu.Text = "X"
-closeMenu.Parent = menuFrame
-closeMenu.MouseButton1Click:Connect(function() menuFrame.Visible = false end)
-toggle.MouseButton1Click:Connect(function() menuFrame.Visible = not menuFrame.Visible end)
-
-local info = Instance.new("TextLabel")
-info.Position = UDim2.fromOffset(12, 39)
-info.Size = UDim2.new(1, -24, 0, 32)
-info.BackgroundTransparency = 1
-info.TextColor3 = Color3.fromRGB(215, 220, 230)
-info.Font = Enum.Font.Gotham
-info.TextSize = 14
-info.TextWrapped = true
-info.TextXAlignment = Enum.TextXAlignment.Left
-info.Text = "Select a server, then open its link in your browser."
-info.Parent = menuFrame
-
-local linkBox = Instance.new("TextBox")
-linkBox.Name = "SelectedLink"
-linkBox.Position = UDim2.fromOffset(12, 73)
-linkBox.Size = UDim2.new(1, -24, 0, 32)
-linkBox.BackgroundColor3 = Color3.fromRGB(45, 49, 59)
-linkBox.TextColor3 = Color3.new(1, 1, 1)
-linkBox.Font = Enum.Font.Code
-linkBox.TextSize = 14
-linkBox.ClearTextOnFocus = false
-linkBox.TextEditable = true
-linkBox.Text = "Select a server below"
-linkBox.Parent = menuFrame
-
-local list = Instance.new("ScrollingFrame")
-list.Position = UDim2.fromOffset(12, 113)
-list.Size = UDim2.new(1, -24, 1, -125)
-list.BackgroundTransparency = 1
-list.BorderSizePixel = 0
-list.ScrollBarThickness = 7
-list.CanvasSize = UDim2.fromOffset(0, 0)
-list.AutomaticCanvasSize = Enum.AutomaticSize.Y
-list.Parent = menuFrame
-local layout = Instance.new("UIListLayout")
-layout.Padding = UDim.new(0, 5)
-layout.SortOrder = Enum.SortOrder.LayoutOrder
-layout.Parent = list
-for i, code in ipairs(serverCodes) do
-    local serverButton = Instance.new("TextButton")
-    serverButton.LayoutOrder = i
-    serverButton.Size = UDim2.new(1, -8, 0, 40)
-    serverButton.BackgroundColor3 = Color3.fromRGB(53, 62, 82)
-    serverButton.TextColor3 = Color3.new(1, 1, 1)
-    serverButton.Font = Enum.Font.GothamBold
-    serverButton.TextSize = 15
-    serverButton.Text = "Server " .. i .. "  |  Any Ages"
-    serverButton.Parent = list
-    local buttonRound = Instance.new("UICorner"); buttonRound.CornerRadius = UDim.new(0, 5); buttonRound.Parent = serverButton
-    serverButton.MouseButton1Click:Connect(function()
-        local url = "https://www.roblox.com/games/142823291/Murder-Mystery-2?privateServerLinkCode=" .. code
-        linkBox.Text = url
-        if type(setclipboard) == "function" then
-            local ok = pcall(setclipboard, url)
-            info.Text = ok and ("Server " .. i .. ": copied! Open the link in your browser.") or "Copy the link above and open it in your browser."
-        else
-            info.Text = "Copy the link above and open it in your browser."
-        end
-    end)
-end
-
-
--- Auto Offer: opt-in, one run per press. Never touches trade Accept/Decline.
--- The GUI paths below were observed in the user's desktop trade diagnostic.
--- The only synthetic operation is firesignal on an inventory item's ActionButton;
--- this is executor-specific and is not available in standard Roblox LocalScripts.
-local offerGuiName = "SupremeAutoOffer"
-local previousOfferGui = playerGui:FindFirstChild(offerGuiName)
-if previousOfferGui then previousOfferGui:Destroy() end
-local autoGui = Instance.new("ScreenGui")
-autoGui.Name = offerGuiName
-autoGui.ResetOnSpawn = false
-autoGui.DisplayOrder = 1002
-autoGui.Parent = playerGui
-local autoPanel = Instance.new("Frame")
-autoPanel.Name = "AutoPanel"
-autoPanel.Size = UDim2.fromOffset(290, 80)
-autoPanel.Position = UDim2.new(1, -300, 0.5, -40)
-autoPanel.BackgroundColor3 = Color3.fromRGB(27, 30, 38)
-autoPanel.Visible = false
-autoPanel.Parent = autoGui
-local autoCorner = Instance.new("UICorner"); autoCorner.CornerRadius = UDim.new(0, 7); autoCorner.Parent = autoPanel
-local autoButton = Instance.new("TextButton")
-autoButton.Name = "AutoOfferButton"
-autoButton.Size = UDim2.new(1, -12, 0, 36)
-autoButton.Position = UDim2.fromOffset(6, 5)
-autoButton.BackgroundColor3 = Color3.fromRGB(67, 99, 165)
-autoButton.TextColor3 = Color3.new(1,1,1)
-autoButton.Font = Enum.Font.GothamBold
-autoButton.TextSize = 15
-autoButton.Text = "AUTO OFFER (09 NOV)"
-autoButton.Parent = autoPanel
-local autoStatus = Instance.new("TextLabel")
-autoStatus.Position = UDim2.fromOffset(6, 44)
-autoStatus.Size = UDim2.new(1, -12, 0, 30)
-autoStatus.BackgroundTransparency = 1
-autoStatus.TextColor3 = Color3.fromRGB(240, 224, 170)
-autoStatus.Font = Enum.Font.Gotham
-autoStatus.TextSize = 14
-autoStatus.TextScaled = true
-autoStatus.TextWrapped = true
-local autoTextLimit = Instance.new("UITextSizeConstraint")
-autoTextLimit.MinTextSize = 9
-autoTextLimit.MaxTextSize = 14
-autoTextLimit.Parent = autoStatus
-autoStatus.Text = "Supreme 09 Nov • review before accepting"
-autoStatus.Parent = autoPanel
-local busy = false
-local function autoMessage(text) autoStatus.Text = text end
-local function getChildChain(root, names)
-    local node = root
-    for _, part in ipairs(names) do
-        node = node and node:FindFirstChild(part)
-    end
-    return node
-end
-local function offerKey(card)
-    local itemName = card:FindFirstChild("ItemName")
-    local label = itemName and itemName:FindFirstChild("Label")
-    local icon = card:FindFirstChild("Icon", true)
-    if not label or not label:IsA("TextLabel") or not icon or not (icon:IsA("ImageLabel") or icon:IsA("ImageButton")) then return nil end
-    local image = icon.Image or ""
-    local id = image:match("[?&][iI][dD]=(%d+)") or image:match("[?&]assetId=(%d+)") or image:match("^rbxassetid://(%d+)$")
-    if not id then return nil end
-    return normalize(label.Text) .. "|" .. id
-end
-local function offerFingerprint(offer)
-    local holder = offer and offer:FindFirstChild("Container")
-    if not holder then return nil end
-    local values = {}
-    for _, card in ipairs(holder:GetChildren()) do
-        if card:IsA("GuiObject") and visible(card) then
-            local key = offerKey(card)
-            local quantity = countInCard(card)
-            if not key or not quantity then return nil end
-            table.insert(values, key .. "|" .. tostring(quantity))
-        end
-    end
-    table.sort(values)
-    return table.concat(values, ";")
-end
-local function getSlotCount(offer)
-    local holder = offer and offer:FindFirstChild("ItemBackground")
-    if not holder then return nil end
-    local count = 0
-    for _, child in ipairs(holder:GetChildren()) do
-        if child:IsA("GuiObject") and child.Name:match("^NewItem") then count = count + 1 end
-    end
-    return count > 0 and count or nil
-end
-local function inventoryCards(trade)
-    local gui = trade.Parent and trade.Parent.Parent
-    return getChildChain(gui, {"Container", "Items", "Main", "Weapons", "Items", "Container", "Current", "Container"})
-end
-local function buildCandidates(trade, myOffer)
-    local list = inventoryCards(trade)
-    local existing = myOffer and myOffer:FindFirstChild("Container")
-    if not list or not existing then return nil end
-    local used = {}
-    for _, card in ipairs(existing:GetChildren()) do
-        if card:IsA("GuiObject") and visible(card) then
-            local key = offerKey(card)
-            if not key then return nil end
-            used[key] = true
-        end
-    end
-    local options, seen = {}, {}
-    for _, card in ipairs(list:GetChildren()) do
-        if card:IsA("GuiObject") and card.Name:match("^NewItem") and visible(card) then
-            local itemName = card:FindFirstChild("ItemName")
-            local label = itemName and itemName:FindFirstChild("Label")
-            local cardContainer = card:FindFirstChild("Container")
-            local action = cardContainer and cardContainer:FindFirstChild("ActionButton")
-            local locked = card:FindFirstChild("Locked")
-            local key = offerKey(card)
-            if label and label:IsA("TextLabel") and action and action:IsA("TextButton") and key and not used[key] and not seen[key]
-                and not (locked and locked:IsA("GuiObject") and locked.Visible) then
-                local lo, hi, approximate, guessed = valueRange(label.Text, label)
-                if lo and hi and lo > 0 and math.abs(hi-lo) < 0.0000001 and not guessed then
-                    table.insert(options, {card=card, button=action, value=lo, key=key, name=label.Text, approximate=approximate})
-                    seen[key] = true
-                end
-            end
-        end
-    end
-    return options
-end
-local function chooseOffer(options, existingValue, targetValue, remainingSlots)
-    local lower, upper = targetValue * 0.90, targetValue * 0.95
-    local midpoint = targetValue * 0.925
-    local eligible = {}
-    for _, option in ipairs(options) do
-        if existingValue + option.value <= upper + 1e-9 then table.insert(eligible, option) end
-    end
-    table.sort(eligible, function(a,b) return a.value > b.value end)
-    -- Use a diversified, bounded pool: expensive and cheaper cards both get a chance.
-    local pool, poolSeen = {}, {}
-    local function include(i)
-        local entry = eligible[i]
-        if entry and not poolSeen[entry.key] then
-            poolSeen[entry.key] = true; table.insert(pool, entry)
-        end
-    end
-    for i = 1, math.min(#eligible, 40) do include(i) end
-    if #eligible > 40 then
-        for j = 0, 39 do include(math.floor(41 + j * (#eligible - 41) / 39 + 0.5)) end
-    end
-    table.sort(pool, function(a,b) return a.value > b.value end)
-    local best, bestTotal, bestDistance, tested, aborted = nil, -1, math.huge, 0, false
-    local current = {}
-    local function consider(total)
-        if #current == 0 or total > upper + 1e-9 then return end
-        local inRange = total >= lower - 1e-9
-        local bestInRange = bestTotal >= lower - 1e-9
-        local distance = math.abs(total - midpoint)
-        if not best or (inRange and not bestInRange)
-            or (inRange and bestInRange and distance < bestDistance)
-            or (not inRange and not bestInRange and total > bestTotal + 1e-9) then
-            best, bestTotal, bestDistance = {}, total, distance
-            for i, entry in ipairs(current) do best[i] = entry end
-        end
-    end
-    -- Seed every single candidate and a greedy combination before bounded search.
-    for i, first in ipairs(pool) do
-        current = {first}
-        local total = existingValue + first.value
-        consider(total)
-        for j = i + 1, #pool do
-            local entry = pool[j]
-            if #current >= remainingSlots then break end
-            if total + entry.value <= upper + 1e-9 then
-                current[#current+1] = entry; total = total + entry.value
-                consider(total)
-            end
-        end
-    end
-    current = {}
-    local function visit(start, total, depth)
-        tested = tested + 1
-        if tested > 600000 then aborted = true; return end
-        consider(total)
-        if depth >= remainingSlots then return end
-        for i = start, #pool do
-            if aborted then return end
-            local entry = pool[i]
-            if total + entry.value <= upper + 1e-9 then
-                current[#current+1] = entry
-                visit(i+1, total+entry.value, depth+1)
-                current[#current] = nil
-            end
-        end
-    end
-    visit(1, existingValue, 0)
-    return best, aborted, #eligible > #pool
-end
-local function runAutoOffer()
-    if busy then return end
-    busy = true
-    local ok, err = pcall(function()
-        if type(firesignal) ~= "function" then autoMessage("Unsupported: firesignal unavailable"); return end
-        local trade = findTrade()
-        local myOffer = trade and trade:FindFirstChild("YourOffer")
-        local theirOffer = trade and trade:FindFirstChild("TheirOffer")
-        local mine = myOffer and calculate(myOffer)
-        local theirs = theirOffer and calculate(theirOffer)
-        local fingerprint = theirOffer and offerFingerprint(theirOffer)
-        local myFingerprint = myOffer and offerFingerprint(myOffer)
-        local slotCount = myOffer and getSlotCount(myOffer)
-        if not trade or not mine or not theirs or not fingerprint or not myFingerprint or not slotCount then autoMessage("Trade layout not recognized"); return end
-        if mine.unknown > 0 or theirs.unknown > 0 or mine.guessed or theirs.guessed then autoMessage("Unknown/ambiguous value; no items added"); return end
-        if theirs.count == 0 or theirs.low <= 0 then autoMessage("Other offer is empty or unpriced"); return end
-        local remaining = slotCount - mine.count
-        if remaining <= 0 then autoMessage("No free offer slots"); return end
-        if mine.low > theirs.low * 0.95 then autoMessage("Current offer already too high"); return end
-        if mine.count > 0 and mine.low >= theirs.low * 0.90 then autoMessage("Current offer already within 90-95%"); return end
-        local options = buildCandidates(trade, myOffer)
-        if not options then autoMessage("Inventory layout not recognized"); return end
-        local chosen, truncated, sampled = chooseOffer(options, mine.low, theirs.low, remaining)
-        if not chosen then autoMessage("No item at or below 95%; nothing added"); return end
-        autoMessage("Adding "..#chosen.." item(s)...")
-        for _, item in ipairs(chosen) do
-            if findTrade() ~= trade or offerFingerprint(theirOffer) ~= fingerprint then autoMessage("Other offer changed; stopped"); return end
-            if offerFingerprint(myOffer) ~= myFingerprint then autoMessage("Your offer changed; stopped"); return end
-            local currentMine = calculate(myOffer)
-            if not currentMine or currentMine.unknown > 0 or currentMine.guessed then autoMessage("Your offer changed; stopped"); return end
-            if not item.card.Parent or not item.button.Parent or not visible(item.button) then autoMessage("Item unavailable; stopped"); return end
-            local before = currentMine.count
-            local signalOk = pcall(function() firesignal(item.button.MouseButton1Click) end)
-            if not signalOk then autoMessage("Item action failed; stopped"); return end
-            local observed = false
-            for _ = 1, 20 do
-                task.wait(0.1)
-                if findTrade() ~= trade or offerFingerprint(theirOffer) ~= fingerprint then autoMessage("Other offer changed; stopped"); return end
-                local after = calculate(myOffer)
-                if after and after.unknown == 0 and after.count == before + 1 then
-                    if math.abs(after.low - currentMine.low - item.value) > 0.000001 then autoMessage("Unexpected offer value; stopped"); return end
-                    observed = true; break
-                elseif after and after.count > before + 1 then
-                    autoMessage("Unexpected offer change; stopped"); return
-                end
-            end
-            if not observed then autoMessage("No item added; action unsupported"); return end
-            myFingerprint = offerFingerprint(myOffer)
-            if not myFingerprint then autoMessage("Offer cannot be checked; stopped"); return end
-        end
-        local final = calculate(myOffer)
-        if final and final.unknown == 0 and not final.guessed and final.low <= theirs.low * 0.95 + 1e-9 then
-            local percent = 100 * final.low / theirs.low
-            local limited = (truncated or sampled) and " | limited search" or ""
-            local lowerWarning = percent < 90 and " | below 90%" or ""
-            autoMessage(string.format("%.1f%%", percent) .. lowerWarning .. limited .. "; review manually")
-        else
-            autoMessage("Offer changed; review manually")
-        end
-    end)
-    if not ok then autoMessage("Auto Offer error; stopped"); warn("Auto Offer: "..tostring(err)) end
-    busy = false
-end
-autoButton.MouseButton1Click:Connect(runAutoOffer)
-task.spawn(function()
-    while autoGui.Parent do
-        autoPanel.Visible = findTrade() ~= nil
-        task.wait(0.4)
     end
 end)
