@@ -2106,9 +2106,6 @@ local function makeText(name, fontSize)
     limit.Parent = label
     return label
 end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
-
 -- Each offer total is shown beside its heading, in the same row.
 local result = makeText("YourOfferEquation", 25)
 local details = makeText("TheirOfferEquation", 25)
