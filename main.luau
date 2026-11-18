@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
 local items = {
 
     {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
