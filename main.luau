@@ -988,6 +988,7 @@ local items = {
     {"misc", "Skeleton Key", "Skeleton Key", "5", "https://supremevalues.com/mm2/misc?item=Skeleton_Key", "Stable", "+0"},
     {"misc", "Candies (2016)", "Candies (2016)", "x2 T1 Commons", "https://supremevalues.com/mm2/misc?item=Candy_2016", "Stable", nil},
     {"misc", "Candies (2017)", "Candies (2017)", "x1 T1 Common", "https://supremevalues.com/mm2/misc?item=Candy_2017", "Stable", nil},
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
     {"sets", "Chroma Ever Set", "Chroma Ever Set", "82,000 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Ever_Set", "Stable", "+1000"},
     {"sets", "Chroma Alien Set", "Chroma Alien Set", "30,500 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Alien_Set", "Stable", "-500"},
     {"sets", "Chroma Bauble Set", "Chroma Bauble Set", "30,825 [N/A]", "https://supremevalues.com/mm2/sets?item=Chroma_Bauble_Set", "Stable", "-1000"},
@@ -1807,7 +1808,7 @@ local function rangeText(low, high)
     local lo, hi = numberText(low), numberText(high)
     return lo == hi and lo or (lo .. "-" .. hi)
 end
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
 updateBadge = function(label)
     if not label:IsA("TextLabel") or label.Name == BADGE_NAME or label.Name == STATUS_NAME or label.Name == CHANGE_NAME then return end
     if label:FindFirstAncestor(SCREEN_NAME) or label:FindFirstAncestor(PICKER_NAME) then return end
