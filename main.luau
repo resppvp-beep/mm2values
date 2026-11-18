@@ -2094,21 +2094,22 @@ local function makeText(name, fontSize)
     label.TextWrapped = false
     label.TextXAlignment = Enum.TextXAlignment.Left
     label.TextYAlignment = Enum.TextYAlignment.Center
-    label.TextColor3 = Color3.fromRGB(255, 226, 135)
+    label.TextColor3 = Color3.fromRGB(255, 255, 255)
     label.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-    label.TextStrokeTransparency = 0.35
+    label.TextStrokeTransparency = 0.25
     label.ZIndex = 100
     label.Visible = false
     label.Parent = screen
     local limit = Instance.new("UITextSizeConstraint")
     limit.MaxTextSize = fontSize
-    limit.MinTextSize = 16
+    limit.MinTextSize = 13
     limit.Parent = label
     return label
 end
--- Each offer total is shown beside its heading, in the same row.
-local result = makeText("YourOfferEquation", 25)
-local details = makeText("TheirOfferEquation", 25)
+
+-- Each offer gets its own equation, positioned directly above its item slots.
+local result = makeText("YourOfferEquation", 19)
+local details = makeText("TheirOfferEquation", 19)
 
 local function isVisibleInside(object, root)
     local node = object
@@ -2210,12 +2211,7 @@ local function findTrade()
         local root = playerGui:FindFirstChild(guiName)
         local container = root and root:FindFirstChild("Container")
         local trade = container and container:FindFirstChild("Trade")
-        if trade and trade:IsA("GuiObject") and visible(trade) then
-            -- Match the game trade GUI inset so absolute header coordinates align.
-            local sourceScreen = trade:FindFirstAncestorOfClass("ScreenGui")
-            if sourceScreen then screen.IgnoreGuiInset = sourceScreen.IgnoreGuiInset end
-            return trade
-        end
+        if trade and trade:IsA("GuiObject") and visible(trade) then return trade end
     end
     return nil
 end
@@ -2302,10 +2298,8 @@ local function refresh()
     local theirsOffer = trade:FindFirstChild("TheirOffer")
     local mine = calculate(mineOffer)
     local theirs = calculate(theirsOffer)
-    -- Show both totals only after the other player adds an item to their offer.
-    local receiving = theirs and theirs.count > 0
-    local mineText = receiving and mine and sideTotalText(mine) or nil
-    local theirsText = receiving and sideTotalText(theirs) or nil
+    local mineText = mine and mine.count > 0 and sideEquation(mine) or nil
+    local theirsText = theirs and theirs.count > 0 and sideEquation(theirs) or nil
     placeEquation(result, trade, mineOffer, "your offer", mineText)
     placeEquation(details, trade, theirsOffer, "their offer", theirsText)
 end
