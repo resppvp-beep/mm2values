@@ -1807,7 +1807,7 @@ local function rangeText(low, high)
     local lo, hi = numberText(low), numberText(high)
     return lo == hi and lo or (lo .. "-" .. hi)
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
+
 updateBadge = function(label)
     if not label:IsA("TextLabel") or label.Name == BADGE_NAME or label.Name == STATUS_NAME or label.Name == CHANGE_NAME then return end
     if label:FindFirstAncestor(SCREEN_NAME) or label:FindFirstAncestor(PICKER_NAME) then return end
@@ -2120,6 +2120,7 @@ local function isVisibleInside(object, root)
     end
     return false
 end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/resppvp-beep/mm2/main/mm2_values.luau"))()
 local function findOfferHeading(trade, offer, phrase)
     -- Prefer the title contained by this exact offer; never match a hidden or
     -- unrelated heading elsewhere in the trade window.
