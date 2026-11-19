@@ -1,3 +1,4 @@
+
 local items = {
     {"ancients", "Batwing", "Batwing", "40", "https://supremevalues.com/mm2/ancients?item=Batwing", "Stable", "-2"},
     {"ancients", "Celestial", "Celestial", "1,950", "https://supremevalues.com/mm2/ancients?item=Celestial", "Stable", "-50"},
@@ -1604,18 +1605,55 @@ local function numberText(n)
     local formatted = string.format("%.2f", n)
     return (formatted:gsub("%.?0+$", ""))
 end
--- Inventory colors observed in the supplied screenshot/diagnostic only.
--- An unrecognized color is never treated as evidence of rarity.
+-- Prefer explicit rarity metadata, then the colored ItemName strip.
+local rarityAliases = {
+    common="commons", commons="commons", uncommon="uncommons", uncommons="uncommons",
+    rare="rares", rares="rares", legendary="legendaries", legendaries="legendaries",
+    godly="godlies", godlies="godlies", ancient="ancients", ancients="ancients",
+    vintage="vintages", vintages="vintages", classic="vintages",
+    unique="uniques", uniques="uniques", chroma="chromas", chromas="chromas",
+}
+local rarityColors = {
+    {106,106,106,"commons"}, {0,255,255,"uncommons"},
+    {0,200,0,"rares"}, {0,255,0,"rares"},
+    {220,0,5,"legendaries"}, {255,0,0,"legendaries"},
+    {255,0,170,"godlies"}, {255,0,255,"godlies"}, {255,0,127,"godlies"},
+    {100,0,255,"ancients"}, {128,0,255,"ancients"},
+    {255,255,0,"vintages"}, {255,100,0,"uniques"},
+}
 local function cardCategory(label)
-    local parent = label and label.Parent
-    if not parent or parent.Name ~= "ItemName" or not parent:IsA("GuiObject") then return nil end
-    local c = parent.BackgroundColor3
-    local red, green, blue = math.floor(c.R*255+0.5), math.floor(c.G*255+0.5), math.floor(c.B*255+0.5)
-    if red == 106 and green == 106 and blue == 106 then return "commons" end
-    if red == 0 and green == 255 and blue == 255 then return "uncommons" end
-    if red == 0 and green == 200 and blue == 0 then return "rares" end
-    if red == 220 and green == 0 and blue == 5 then return "legendaries" end
-    return nil
+    local strip = label and label.Parent
+    if not strip or strip.Name ~= "ItemName" or not strip:IsA("GuiObject") then return nil end
+    local card = strip.Parent
+    for _, object in ipairs({card, strip, label}) do
+        if object then
+            for key, value in pairs(object:GetAttributes()) do
+                local k = key:lower():gsub("[^%w]", "")
+                if (k == "rarity" or k == "itemrarity" or k == "weaponrarity") and type(value) == "string" then
+                    local hit = rarityAliases[normalize(value)]
+                    if hit then return hit end
+                end
+            end
+            for _, child in ipairs(object:GetChildren()) do
+                local k = child.Name:lower():gsub("[^%w]", "")
+                if k == "rarity" or k == "itemrarity" or k == "weaponrarity" then
+                    local raw = child:IsA("StringValue") and child.Value
+                        or ((child:IsA("TextLabel") or child:IsA("TextButton")) and child.Text)
+                    local hit = raw and rarityAliases[normalize(raw)]
+                    if hit then return hit end
+                end
+            end
+        end
+    end
+    if strip.BackgroundTransparency >= 0.95 then return nil end
+    local c = strip.BackgroundColor3
+    local r, g, b = c.R*255, c.G*255, c.B*255
+    local best, distance = nil, 28*28
+    for _, entry in ipairs(rarityColors) do
+        local d = (r-entry[1])^2 + (g-entry[2])^2 + (b-entry[3])^2
+        if d < distance then best, distance = entry[4], d end
+    end
+    return best
 end
 -- Roblox asset names sometimes contain Gun/Knife. Asset names can also be
 -- identical for both models, so only use an explicit, exact type suffix.
@@ -1920,14 +1958,14 @@ local function valueRange(name, label)
         end
         return nil
     end
+    local category = cardCategory(label)
     local identified = itemFromIcon(label, name)
-    if identified then
+    if identified and (not category or identified[1] == category) then
         local amount, estimated = itemValue(identified[4])
         if amount then return amount, amount, estimated, false, identified end
         return nil
     end
     local group = candidates(name)
-    local category = cardCategory(label)
     if not group then
         -- No catalog match: T1 rarity baseline, NOT the item's researched price.
         return nil
@@ -1938,12 +1976,19 @@ local function valueRange(name, label)
             if item[1] == category then table.insert(filtered, item) end
         end
     end
-    -- If rarity was recognized but the snapshot has no matching item in it,
-    -- use its baseline rather than pricing a different rarity with that name.
+    -- Never substitute a same-name item from another rarity.
     if category and #filtered == 0 then
         return nil
     end
-    if category then group = filtered end
+    if category then
+        group = filtered
+    else
+        -- Unknown color/metadata: do not silently select the cheapest rarity.
+        local firstCategory = group[1] and group[1][1]
+        for _, item in ipairs(group) do
+            if item[1] ~= firstCategory then return nil end
+        end
+    end
     local cardKind, cardIdentity = cardMetadata(label)
     local explicit = byExplicitIdentity(group, cardIdentity)
     if explicit then
@@ -2269,6 +2314,26 @@ showVariantPicker = function(label)
 end
 
 local function watch(object)
+    local rarityKey = object.Name:lower():gsub("[^%w]", "")
+    if rarityKey == "rarity" or rarityKey == "itemrarity" or rarityKey == "weaponrarity" then
+        local node = object.Parent
+        local cardLabel
+        for _ = 1, 3 do
+            if not node then break end
+            local strip = node.Name == "ItemName" and node or node:FindFirstChild("ItemName")
+            cardLabel = strip and strip:FindFirstChild("Label")
+            if cardLabel then break end
+            node = node.Parent
+        end
+        if cardLabel and cardLabel:IsA("TextLabel") then
+            local function changed() if cardLabel.Parent then updateBadge(cardLabel) end end
+            changed()
+            if object:IsA("StringValue") then object.Changed:Connect(changed)
+            elseif object:IsA("TextLabel") or object:IsA("TextButton") then
+                object:GetPropertyChangedSignal("Text"):Connect(changed)
+            end
+        end
+    end
     if object:IsA("ImageLabel") or object:IsA("ImageButton") then
         if object.Name ~= "Icon" then return end
         local function iconChanged()
@@ -2284,6 +2349,26 @@ local function watch(object)
     if not object:IsA("TextLabel") or object.Name == BADGE_NAME or object.Name == STATUS_NAME or object.Name == CHANGE_NAME then return end
     if object:FindFirstAncestor(SCREEN_NAME) or object:FindFirstAncestor(PICKER_NAME) then return end
     local lastText = object.Text
+    if isItemLabel(object) then
+        local strip, card = object.Parent, object.Parent.Parent
+        local function rarityChanged()
+            if object.Parent then updateBadge(object) end
+        end
+        strip:GetPropertyChangedSignal("BackgroundColor3"):Connect(rarityChanged)
+        strip:GetPropertyChangedSignal("BackgroundTransparency"):Connect(rarityChanged)
+        for _, node in ipairs({card, strip, object}) do
+            node.AttributeChanged:Connect(rarityChanged)
+            for _, child in ipairs(node:GetChildren()) do
+                local key = child.Name:lower():gsub("[^%w]", "")
+                if key == "rarity" or key == "itemrarity" or key == "weaponrarity" then
+                    if child:IsA("StringValue") then child.Changed:Connect(rarityChanged)
+                    elseif child:IsA("TextLabel") or child:IsA("TextButton") then
+                        child:GetPropertyChangedSignal("Text"):Connect(rarityChanged)
+                    end
+                end
+            end
+        end
+    end
     updateBadge(object)
     object:GetPropertyChangedSignal("Text"):Connect(function()
         if object.Text == lastText then return end
